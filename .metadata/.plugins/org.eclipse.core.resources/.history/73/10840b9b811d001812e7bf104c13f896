@@ -1,0 +1,35 @@
+/**
+  ******************************************************************************
+  * @file    main.c
+  * @author  Ac6
+  * @version V1.0
+  * @date    01-December-2013
+  * @brief   Default main function.
+  ******************************************************************************
+*/
+
+
+#include "stm32f4xx.h"
+			
+
+int main(void)
+{
+	init();
+	for(;;);
+}
+
+void init()
+{
+	// Enable RCC clock
+
+	// Set I2S alternate function settings
+	GPIO_InitTypeDef i2sPortSettings;
+	GPIO_Struct_Init(&i2sPortSettings);
+	i2sPortSettings.GPIO_Mode = GPIO_Mode_AF;
+	GPIO_Init(GPIOA, &i2sPortSettings);
+
+	GPIO_InitTypeDef i2cPortSettings;
+	GPIO_Struct_Init(&i2cPortSettings);
+	i2cPortSettings.GPIO_Mode = GPIO_Mode_AF;
+	GPIO_Init(GPIOB, &i2cPortSettings);
+}
