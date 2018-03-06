@@ -1,0 +1,80 @@
+/*
+ * tlv_dac.c
+ *
+ *  Created on: Mar 5, 2018
+ *      Author: winstona
+ */
+
+#include "tlv_dac.h"
+#include "stm32f4xx.h"
+
+#define SD_I2S_ALT_FUNC (GPIO_AF_SPI1)
+#define SD_I2C_ALT_FUNC (GPIO_AF_I2C1)
+
+#define SD_I2S_WS		(4)
+#define SD_I2S_CK		(5)
+#define SD_I2S_SD		(6)
+
+#define SD_I2S_WS_PIN	(GPIO_Pin_4)
+#define SD_I2S_CK_PIN	(GPIO_Pin_5)
+#define SD_I2S_SD_PIN	(GPIO_Pin_6)
+
+#define SD_I2C_SCL 		(8)
+#define SD_I2C_SDA		(9)
+
+#define SD_I2C_SCL_PIN	(GPIO_Pin_8)
+#define SD_I2C_SDA_PIN	(GPIO_Pin_9)
+
+#define TLV_I2C_ADDR	(0x18) // 7 bit address
+
+void tlv_dac_init()
+{
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA | RCC_AHB1Periph_GPIOB, ENABLE);
+
+	initI2sPins();
+	initI2c();
+}
+
+/**
+ * Initializes the I2S component of the system, designed for use with the codec
+ * for transmission of audio data.
+ */
+void tlv_dac_initI2sPins()
+{
+	// Set I2S alternate function settings
+	GPIO_InitTypeDef i2sPortSettings;
+	GPIO_StructInit(&i2sPortSettings);
+	i2sPortSettings.GPIO_Mode = GPIO_Mode_AF;
+	i2sPortSettings.GPIO_Pin = SD_I2S_WS_PIN | SD_I2S_CK_PIN | SD_I2S_SD_PIN;
+	GPIO_Init(GPIOA, &i2sPortSettings);
+	// Now set up the alternate function.
+	GPIO_PinAFConfig(GPIOA, SD_I2S_WS, SD_I2S_ALT_FUNC);
+	GPIO_PinAFConfig(GPIOA, SD_I2S_CK, SD_I2S_ALT_FUNC);
+	GPIO_PinAFConfig(GPIOA, SD_I2S_SD, SD_I2S_ALT_FUNC);
+}
+
+/**
+ * Initializes the I2C component of the system, designed for use with the codec
+ * for transmission of commands to the codec.
+ */
+void tlv_dac_initI2cPins()
+{
+	// Set I2C alternate function settings
+	GPIO_InitTypeDef i2cPortSettings;
+	GPIO_StructInit(&i2cPortSettings);
+	i2cPortSettings.GPIO_Pin = SD_I2C_SCL_PIN | SD_I2C_SDA_PIN;
+	i2cPortSettings.GPIO_Mode = GPIO_Mode_AF;
+	i2cPortSettings.GPIO_PuPd = GPIO_PuPd_UP;
+	GPIO_Init(GPIOB, &i2cPortSettings);
+	GPIO_PinAFConfig(GPIOB, SD_I2C_SCL, SD_I2C_ALT_FUNC);
+	GPIO_PinAFConfig(GPIOB, SD_I2C_SDA, SD_I2C_ALT_FUNC);
+
+	I2C_InitTypeDef i2cInterfaceSettings;
+	I2C_StructInit(&i2cInterfaceSettings);
+
+}
+
+void tlv_dac_initRegisters()
+{
+
+}

@@ -1,28 +1,6 @@
-12:42:41 **** Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
+11:26:35 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
 make all 
-Building file: ../StdPeriph_Driver/src/misc.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/misc.d" -MT"StdPeriph_Driver/src/misc.o" -o "StdPeriph_Driver/src/misc.o" "../StdPeriph_Driver/src/misc.c"
-Finished building: ../StdPeriph_Driver/src/misc.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_adc.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_adc.d" -MT"StdPeriph_Driver/src/stm32f4xx_adc.o" -o "StdPeriph_Driver/src/stm32f4xx_adc.o" "../StdPeriph_Driver/src/stm32f4xx_adc.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_adc.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_can.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_can.d" -MT"StdPeriph_Driver/src/stm32f4xx_can.o" -o "StdPeriph_Driver/src/stm32f4xx_can.o" "../StdPeriph_Driver/src/stm32f4xx_can.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_can.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_cec.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_cec.d" -MT"StdPeriph_Driver/src/stm32f4xx_cec.o" -o "StdPeriph_Driver/src/stm32f4xx_cec.o" "../StdPeriph_Driver/src/stm32f4xx_cec.c"
-Command canceled
+make: Nothing to be done for `all'.
 
-12:42:46 Build Cancelled (took 4s.235ms)
+11:26:35 Build Finished (took 296ms)
 

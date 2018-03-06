@@ -1,0 +1,26 @@
+11:26:35 **** Incremental Build of configuration Debug for project DAC ****
+make all 
+Building file: ../src/tlv_dac.c
+Invoking: MCU GCC Compiler
+%cd%
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib" -I"C:/Users/winstona/Documents/CE4020/DAC/inc" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/tlv_dac.d" -MT"src/tlv_dac.o" -o "src/tlv_dac.o" "../src/tlv_dac.c"
+../src/tlv_dac.c:84:13: warning: '_tlv_dac_initRegisters' defined but not used [-Wunused-function]
+ static void _tlv_dac_initRegisters()
+             ^
+Finished building: ../src/tlv_dac.c
+ 
+Building target: DAC.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\winstona\Documents\CE4020\nucleo-f446re_stdperiph_lib\Debug" -T"C:\Users\winstona\Documents\CE4020\DAC\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "DAC.elf" @"objects.list"  -lnucleo-f446re_stdperiph_lib
+Finished building target: DAC.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "DAC.elf" "DAC.bin"
+arm-none-eabi-size "DAC.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2196	   1076	   1056	   4328	   10e8	DAC.elf
+ 
+
+11:26:37 Build Finished (took 2s.151ms)
+

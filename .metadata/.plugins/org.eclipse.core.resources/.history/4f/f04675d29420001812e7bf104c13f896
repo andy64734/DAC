@@ -1,0 +1,13 @@
+/*
+ * tlv.c
+ *
+ *  Created on: Mar 5, 2018
+ *      Author: winstona
+ */
+
+#include "tlv.h"
+
+void tlv_init()
+{
+
+}
