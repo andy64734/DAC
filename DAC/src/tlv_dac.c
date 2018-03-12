@@ -8,7 +8,7 @@
 #include "tlv_dac.h"
 #include "stm32f4xx.h"
 #include "stm32f4xx_i2c.h"
-
+#include <ringbuffer.h>
 #define SD_I2S_ALT_FUNC (GPIO_AF_SPI1)
 #define SD_I2C_ALT_FUNC (GPIO_AF_I2C1)
 
@@ -96,9 +96,14 @@ static void _tlv_dac_initI2cPins()
  */
 static void _tlv_dac_initRegisters()
 {
-
+	//ToDo
 }
 
+void tlv_dac_I2S_write_reg(){
+	//ToDo
+}
+
+void tlv_dac_I2S_read
 void tlv_dac_write_reg(uint8_t address, uint8_t message)
 {
 	
