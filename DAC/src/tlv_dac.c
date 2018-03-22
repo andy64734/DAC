@@ -44,6 +44,10 @@
 #define TLV_LEFT_DAC_VOL		(43)
 // Right DAC Digital Volume Control Register
 #define TLV_RIGHT_DAC_VOL		(44)
+// HPLOUT Output Level Control Register
+#define TLV_HPLOUT_OUT_LEVEL	(51)
+// HPROUT Output Level Control Register
+#define TLV_HPROUT_OUT_LEVEL	(65)
 
 #define TLV_REG_MASK			(0x7F)
 
@@ -117,8 +121,8 @@ static void _tlv_dac_initI2cPins()
 	i2cPortSettings.GPIO_Pin = SD_I2C_SCL_PIN | SD_I2C_SDA_PIN;
 	i2cPortSettings.GPIO_Mode = GPIO_Mode_AF;
 	// I2C standard requires pull-up resistors to avoid bus contention.
-	// Thankfully, the STM32 comes to the rescue here.
-	i2cPortSettings.GPIO_PuPd = GPIO_PuPd_UP;
+	// However, external, strong 2.2 k-ohm resistors will help us out.
+	i2cPortSettings.GPIO_PuPd = GPIO_PuPd_NOPULL;
 	GPIO_Init(GPIOB, &i2cPortSettings);
 	GPIO_PinAFConfig(GPIOB, SD_I2C_SCL, SD_I2C_ALT_FUNC);
 	GPIO_PinAFConfig(GPIOB, SD_I2C_SDA, SD_I2C_ALT_FUNC);
@@ -145,11 +149,12 @@ static void _tlv_dac_initRegisters()
 	// Register 37 will allow for powering up of DACs. Use remaining defaults.
 	tlv_dac_write_reg(TLV_DAC_POWER, (1 << TLV_LEFT_DAC_PWR)
 			| (1 << TLV_RIGHT_DAC_PWR));
+	// TODO Change the route so it goes to the high power output.
 	// Route DAC_L3 signal to to left line output driver, and DAC_R3 to
 	// right line output driver. This disables an unnecessary volume
 	// control, and involves fewer writes. A potentiometer can be used
 	// for this instead. The advantage is fewer register writes.
-	tlv_dac_write_reg(TLV_DAC_OUT_SWITCH, (1 << 6) | (1 << 4));
+	tlv_dac_write_reg(TLV_DAC_OUT_SWITCH, (2 << 6) | (2 << 4));
 	// Unmute the left DAC.
 	tlv_dac_write_reg(TLV_LEFT_DAC_VOL, 1 << 7);
 	// Do the same in the right DAC.
@@ -159,24 +164,45 @@ static void _tlv_dac_initRegisters()
 
 /**
  * Write a value to an address of a register.
- * Parameters:
+ * Parameters: address - The address to write to.
+ * 				message - a byte message for what to write.
  */
 void tlv_dac_write_reg(uint8_t address, uint8_t message)
 {
-	// TODO Try to figure out how timing is supposed to work, and which
-	// interrupts to check for.
-	// TODO Ready checking.
+	// Wait for I2C interface to become available. Probably won't be a problem,
+	// but just in case.
+	while (I2C_GetFlagStatus(SD_I2C_INTERFACE, I2C_FLAG_BUSY));
 	I2C_GenerateSTART(SD_I2C_INTERFACE, ENABLE);
 	I2C_Send7bitAddress(SD_I2C_INTERFACE, address, I2C_Direction_Transmitter);
+	while (!I2C_CheckEvent(SD_I2C_INTERFACE,
+				I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED));
+	// Now send an address.
+	I2C_SendData(SD_I2C_INTERFACE, address);
+	while (!I2C_CheckEvent(SD_I2C_INTERFACE,
+			I2C_EVENT_MASTER_BYTE_TRANSMITTED));
+	// And finally send the actual data.
 	I2C_SendData(SD_I2C_INTERFACE, message);
+	while (!I2C_CheckEvent(SD_I2C_INTERFACE,
+			I2C_EVENT_MASTER_BYTE_TRANSMITTED));
 	// TODO Delay here, or polling?
 	I2C_GenerateSTOP(SD_I2C_INTERFACE, ENABLE);
-	I2C_GenerateSTART(SD_I2C_INTERFACE, DISABLE);
+	// START doesn't need to be disabled, since the start bit generation
+	// is disabled after the start bit has been successfully sent.
 }
 
 uint8_t tlv_dac_read_reg(uint8_t address)
 {
+	while (I2C_GetFlagStatus(SD_I2C_INTERFACE, I2C_FLAG_BUSY));
+	I2C_GenerateSTART(SD_I2C_INTERFACE, ENABLE);
 	I2C_Send7bitAddress(SD_I2C_INTERFACE, address, I2C_Direction_Receiver);
-	// TODO Make sure that we can read stuff.
-	return 0;
+	while (!I2C_CheckEvent(SD_I2C_INTERFACE,
+				I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED));
+	// Send an address, and wait to receive a byte back.
+	I2C_SendData(SD_I2C_INTERFACE, address);
+	while (!I2C_CheckEvent(SD_I2C_INTERFACE,
+			I2C_EVENT_MASTER_BYTE_TRANSMITTED));
+	// STOP generated after receiving next byte.
+	I2C_GenerateSTOP(SD_I2C_INTERFACE, ENABLE);
+	while (!I2C_CheckEvent(SD_I2C_INTERFACE, I2C_EVENT_MASTER_BYTE_RECEIVED));
+	return I2C_ReceiveData(SD_I2C_INTERFACE);
 }

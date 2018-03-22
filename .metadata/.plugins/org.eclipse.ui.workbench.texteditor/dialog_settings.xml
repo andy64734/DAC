@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="START" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="92"/>
+			<item value="I2S_Standard"/>
+			<item value="This parameter can be"/>
 			<item value="start"/>
 			<item value="startbit"/>
 			<item value="SD_INTERFACE"/>
 			<item value="stop"/>
 			<item value="ahb1"/>
-			<item value="SPI"/>
-			<item value="spi"/>
-			<item value="gpio_structinit"/>
 		</list>
 		<list key="replacehistory">
 		</list>
@@ -24,7 +24,7 @@
 		<item value="257" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="381" key="DIALOG_HEIGHT"/>
-		<item value="1370" key="DIALOG_X_ORIGIN"/>
+		<item value="710" key="DIALOG_X_ORIGIN"/>
 		<item value="277" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>
