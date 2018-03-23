@@ -8,6 +8,7 @@
 #include "tlv_dac.h"
 #include "stm32f4xx.h"
 #include "stm32f4xx_i2c.h"
+#include "stm32f4xx_spi.h"
 #include <ringbuffer.h>
 #define SD_I2S_ALT_FUNC (GPIO_AF_SPI1)
 #define SD_I2C_ALT_FUNC (GPIO_AF_I2C1)
@@ -91,7 +92,7 @@ static void _tlv_dac_initI2cPins()
 	I2C_StructInit(&i2cInterfaceSettings);
 }
 
-/**
+/*
  *
  */
 static void _tlv_dac_initRegisters()
@@ -99,11 +100,27 @@ static void _tlv_dac_initRegisters()
 	//ToDo
 }
 
-void tlv_dac_I2S_write_reg(){
+void tlv_dac_I2S_write_reg()
+{
 	//ToDo
 }
 
-void tlv_dac_I2S_read
+void tlv_dac_I2S_audioSettings()
+{
+	I2S_InitTypeDef I2S_InitStructure;
+
+	  SPI_I2S_DeInit(SPI2);
+	  I2S_InitStructure.I2S_AudioFreq = 44100 * 2; // Audio is recorded from two channels, so this value must be twice the value in the PDM filter
+	  I2S_InitStructure.I2S_Standard = I2S_Standard_Phillips;
+	  I2S_InitStructure.I2S_DataFormat = I2S_DataFormat_16b;
+	  I2S_InitStructure.I2S_CPOL = I2S_CPOL_High;
+	  I2S_InitStructure.I2S_Mode = I2S_Mode_MasterTx;
+	  I2S_InitStructure.I2S_MCLKOutput = I2S_MCLKOutput_Enable;
+	  I2S_Init(SPI1, &I2S_InitStructure);
+
+}
+
+
 void tlv_dac_write_reg(uint8_t address, uint8_t message)
 {
 	

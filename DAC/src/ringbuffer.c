@@ -5,51 +5,55 @@
  *      Author: sharana
  *      Description: Program to initiate a ring buffer.
  */
-#include"ringbuffer.h"
-#include<inttypes.h>
+#include "ringbuffer.h"
+#include <inttypes.h>
+#include <stdbool.h>
 /*
  * Here we have a method put characters into the buffer.
  * @param buffer it is a structure type to access the correct ring buffer.
  * @param element it is the character.
  */
-void put(RingBuffer* buffer, char element){
+bool put(RingBuffer* buffer, char element)
+{
 	//Check space
-	 if(hasSpace(&buffer)== 1)
-	    {	//adding element to the buffer
-	        buffer->buffer[buffer->put] = element;
-	        buffer->put = (buffer->put + 1) % BUF_SIZE;
-	    }else{
-	    	//it it is at the get
-	            buffer->get = (buffer->get + 1) % BUF_SIZE;
-	            buffer->buffer[buffer->get] = element;
-
-	        }
-	    }
+	 if(hasSpace(&buffer) != 0)
+	 {	//adding element to the buffer
+	        buffer->buffer[buffer->tail] = element;
+	        buffer->tail = (buffer->tail + 1) % BUF_SIZE;
+	        return true;
+	 }else{
+		 // drop the pact
+		 	return false;
+	      }
+}
 /*
  * Here we have a method to get and remove characters into the buffer.
  * @param buffer it is a structure type to access the correct ring buffer.
  */
-char get(RingBuffer* buffer){
+char get(RingBuffer* buffer)
+{
 	//check space
-	if(hasElement(&buffer)== 1){
-		//get character from the  buffer
-	char element = buffer->buffer[buffer->get];
-	//adjusting get
-	buffer->get = (buffer->get+1) % BUF_SIZE;
-	return element;
-
+	if(hasElement(&buffer) != 0)
+	{	//get character from the  buffer
+			char element = buffer->buffer[buffer->tail];
+		//adjusting get
+			buffer->tail = (buffer->tail+1) % BUF_SIZE;
+			return element;
 	}
+
 }
 /*
  * Returns true (non-zero) if there is room for one element in buffer
  * @param buffer it is a structure type to access the correct ring buffer.
  */
-int hasSpace(RingBuffer * buffer){
-	if((((buffer->put + 1) % BUF_SIZE)) == buffer->get){
+int hasSpace(RingBuffer* buffer)
+{
+	if((((buffer->tail + 1) % BUF_SIZE)) == buffer->head)
+	{
 		return 0;
 	}else{
 		return 1;
-	}
+		 }
 }
 
 /*
@@ -57,9 +61,10 @@ int hasSpace(RingBuffer * buffer){
  * @param buffer it is a structure type to access the correct ring buffer.
  */
 int hasElement(RingBuffer * buffer){
-	if(buffer->get==buffer->put){
-			return 0;
-		}else{
-			return 1;
-		}
+	if(buffer->head==buffer->tail)
+	{
+		return 0;
+	}else{
+		return 1;
+		 }
 }

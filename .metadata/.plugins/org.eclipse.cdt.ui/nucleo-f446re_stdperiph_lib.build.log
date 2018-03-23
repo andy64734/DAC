@@ -1,6 +1,6 @@
-11:26:35 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
+21:16:56 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
 make all 
 make: Nothing to be done for `all'.
 
-11:26:35 Build Finished (took 296ms)
+21:16:57 Build Finished (took 340ms)
 

@@ -14,8 +14,8 @@
 
 // buffer structure
 typedef struct{
-	uint8_t put;
-	uint8_t get;
+	uint8_t tail;
+	uint8_t head;
 	uint8_t empty;
 	char buffer[BUF_SIZE];
 } RingBuffer;
