@@ -16,17 +16,15 @@
 bool put(RingBuffer* buffer, char element)
 {
 	//Check space
-	 if (hasSpace(&buffer) != 0)
+	 if(hasSpace(&buffer) != 0)
 	 {	//adding element to the buffer
 	        buffer->buffer[buffer->tail] = element;
 	        buffer->tail = (buffer->tail + 1) % BUF_SIZE;
 	        return true;
-	 }
-	 else
-	 {
+	 }else{
 		 // drop the pact
 		 	return false;
-	 }
+	      }
 }
 /*
  * Here we have a method to get and remove characters into the buffer.
@@ -35,7 +33,7 @@ bool put(RingBuffer* buffer, char element)
 char get(RingBuffer* buffer)
 {
 	//check space
-	if (hasElement(&buffer) != 0)
+	if(hasElement(&buffer) != 0)
 	{	//get character from the  buffer
 			char element = buffer->buffer[buffer->tail];
 		//adjusting get
@@ -50,14 +48,12 @@ char get(RingBuffer* buffer)
  */
 int hasSpace(RingBuffer* buffer)
 {
-	if ((((buffer->tail + 1) % BUF_SIZE)) == buffer->head)
+	if((((buffer->tail + 1) % BUF_SIZE)) == buffer->head)
 	{
-			return 0;
-	}
-	else
-	{
-			return 1;
-	}
+		return 0;
+	}else{
+		return 1;
+		 }
 }
 
 /*
@@ -65,12 +61,10 @@ int hasSpace(RingBuffer* buffer)
  * @param buffer it is a structure type to access the correct ring buffer.
  */
 int hasElement(RingBuffer * buffer){
-	if (buffer->head==buffer->tail)
+	if(buffer->head==buffer->tail)
 	{
-			return 0;
-	}
-	else
-	{
-			return 1;
-	}
+		return 0;
+	}else{
+		return 1;
+		 }
 }

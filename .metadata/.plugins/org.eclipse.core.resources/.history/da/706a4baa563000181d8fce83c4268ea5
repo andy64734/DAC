@@ -70,7 +70,7 @@ static void _tlv_dac_initI2sPins()
 	GPIO_PinAFConfig(GPIOA, SD_I2S_SD, SD_I2S_ALT_FUNC);
 }
 
-/*
+/**
  * Initializes the I2C component of the system, designed for use with the codec
  * for transmission of commands to the codec.
  */
