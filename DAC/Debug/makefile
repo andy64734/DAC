@@ -30,13 +30,13 @@ endif
 all: DAC.elf
 
 dependents:
-	-cd C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/Debug && $(MAKE) all
+	-cd C:/Users/sharana/Documents/Senior_Design/DAC/nucleo-f446re_stdperiph_lib/Debug && $(MAKE) all
 
 # Tool invocations
-DAC.elf: $(OBJS) $(USER_OBJS) C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/Debug/libnucleo-f446re_stdperiph_lib.a
+DAC.elf: $(OBJS) $(USER_OBJS) C:/Users/sharana/Documents/Senior_Design/DAC/nucleo-f446re_stdperiph_lib/Debug/libnucleo-f446re_stdperiph_lib.a
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU GCC Linker'
-	arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\winstona\Documents\CE4020\nucleo-f446re_stdperiph_lib\Debug" -T"C:\Users\winstona\Documents\CE4020\DAC\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "DAC.elf" @"objects.list" $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\sharana\Documents\Senior_Design\DAC\nucleo-f446re_stdperiph_lib\Debug" -T"C:\Users\sharana\Documents\Senior_Design\DAC\DAC\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "DAC.elf" @"objects.list" $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build
@@ -54,6 +54,6 @@ post-build:
 
 .PHONY: all clean dependents
 .SECONDARY: post-build
-C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/Debug/libnucleo-f446re_stdperiph_lib.a:
+C:/Users/sharana/Documents/Senior_Design/DAC/nucleo-f446re_stdperiph_lib/Debug/libnucleo-f446re_stdperiph_lib.a:
 
 -include ../makefile.targets

@@ -1,4 +1,5 @@
 "src/main.o"
+"src/ringbuffer.o"
 "src/syscalls.o"
 "src/system_stm32f4xx.o"
 "src/tlv_dac.o"
