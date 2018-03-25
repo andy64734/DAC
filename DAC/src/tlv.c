@@ -143,14 +143,14 @@ void tlv_dac_I2S_audioSettings()
 {
 	I2S_InitTypeDef I2S_InitStructure;
 
-	  SPI_I2S_DeInit(SPI2);
-	  I2S_InitStructure.I2S_AudioFreq = 44100 * 2; // Audio is recorded from two channels, so this value must be twice the value in the PDM filter
-	  I2S_InitStructure.I2S_Standard = I2S_Standard_Phillips;
-	  I2S_InitStructure.I2S_DataFormat = I2S_DataFormat_16b;
-	  I2S_InitStructure.I2S_CPOL = I2S_CPOL_High;
-	  I2S_InitStructure.I2S_Mode = I2S_Mode_MasterTx;
-	  I2S_InitStructure.I2S_MCLKOutput = I2S_MCLKOutput_Enable;
-	  I2S_Init(SPI1, &I2S_InitStructure);
+	SPI_I2S_DeInit(SPI2);
+	I2S_InitStructure.I2S_AudioFreq = 44100 * 2; // Audio is recorded from two channels, so this value must be twice the value in the PDM filter
+	I2S_InitStructure.I2S_Standard = I2S_Standard_Phillips;
+	I2S_InitStructure.I2S_DataFormat = I2S_DataFormat_16b;
+	I2S_InitStructure.I2S_CPOL = I2S_CPOL_High;
+	I2S_InitStructure.I2S_Mode = I2S_Mode_MasterTx;
+	I2S_InitStructure.I2S_MCLKOutput = I2S_MCLKOutput_Enable;
+	I2S_Init(SPI1, &I2S_InitStructure);
 
 }
 
