@@ -1,0 +1,19 @@
+/*
+ * tlv_adc.c
+ *
+ *  Created on: Mar 26, 2018
+ *      Author: winstona
+ */
+
+#include "tlv_adc.h"
+
+static void _tlv_adc_initRegisters();
+
+void tlv_adc_init()
+{
+
+}
+
+static void _tlv_adc_initRegisters()
+{
+}
