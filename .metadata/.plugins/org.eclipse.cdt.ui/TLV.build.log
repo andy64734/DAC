@@ -1,6 +1,7 @@
-08:27:54 **** Incremental Build of configuration Debug for project TLV ****
-make all 
-make: Nothing to be done for `all'.
+20:28:55 **** Clean-only build of configuration Debug for project TLV ****
+make clean 
+rm -rf *
+ 
 
-08:27:55 Build Finished (took 142ms)
+20:28:55 Build Finished (took 300ms)
 

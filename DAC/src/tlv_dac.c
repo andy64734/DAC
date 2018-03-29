@@ -8,68 +8,6 @@
 #include <tlv_dac.h>
 #include <tlv.h>
 #include "stm32f4xx.h"
-#include "stm32f4xx_i2c.h"
-
-#define SD_I2S_ALT_FUNC 		(GPIO_AF_SPI1)
-#define SD_I2C_ALT_FUNC 		(GPIO_AF_I2C1)
-
-#define SD_I2C_INTERFACE 		I2C1
-#define SD_I2S_INTERFACE 		SPI1
-
-#define SD_I2S_WS				(4)
-#define SD_I2S_CK				(5)
-#define SD_I2S_SD				(6)
-
-#define SD_I2S_WS_PIN			(GPIO_Pin_4)
-#define SD_I2S_CK_PIN			(GPIO_Pin_5)
-#define SD_I2S_SD_PIN			(GPIO_Pin_6)
-
-#define SD_I2C_SCL 				(8)
-#define SD_I2C_SDA				(9)
-
-#define SD_I2C_SCL_PIN			(GPIO_Pin_8)
-#define SD_I2C_SDA_PIN			(GPIO_Pin_9)
-
-// As a note, all registers in this API will follow the convention of using an
-// 8 bit value. The less 7 significant bits will indicate the page, and the
-// most significant one indicates whether to use bank 0 or 1.
-// Codec data-path setup register
-#define TLV_DATA_PATH_REG		(0x7)
-// Serial data interface control register B
-#define TLV_SDI_CR_B			(0x9)
-// DAC Power and Output Driver Control Register
-#define TLV_DAC_POWER			(37)
-// DAC Output Switching Control Register
-#define TLV_DAC_OUT_SWITCH		(41)
-// Left DAC Digital Volume Control Register
-#define TLV_LEFT_DAC_VOL		(43)
-// Right DAC Digital Volume Control Register
-#define TLV_RIGHT_DAC_VOL		(44)
-// HPLOUT Output Level Control Register
-#define TLV_HPLOUT_OUT_LEVEL	(51)
-// HPROUT Output Level Control Register
-#define TLV_HPROUT_OUT_LEVEL	(65)
-
-#define TLV_REG_MASK			(0x7F)
-
-#define TLV_I2C_ADDR			(0x18) // 7 bit address
-
-// Offsets for data paths in data path register.
-#define TLV_LEFT_PATH			(0x3)
-#define TLV_RIGHT_PATH			(0x1)
-// The kinds of data that can go in each path.
-typedef enum {TLV_NO_IN = 0, TLV_LEFT_IN = 1,
-TLV_RIGHT_IN = 2, TLV_MONO_IN = 3} _TLV_INPUT;
-
-// Bit positions in TLV_SDI_CR_B
-#define TLV_SD_TRANSFER			(0x6)
-#define TLV_SD_WORD_LEN			(0x4)
-// Different kinds of interfaces
-typedef enum {TLV_I2S_IF = 0, TLV_DSP_IF = 1,
-TLV_LEFT_IF = 2, TLV_RIGHT_IF = 3} _TLV_INTERFACE;
-
-#define TLV_LEFT_DAC_PWR		(0x7)
-#define TLV_RIGHT_DAC_PWR		(0x6)
 
 /**
  *
@@ -99,6 +37,7 @@ void tlv_dac_init()
 	tlv_initI2sPins();
 	tlv_initI2cPins();
 	_tlv_dac_initRegisters();
+	_tlv_dac_I2S_audioSettings();
 }
 
 static void _tlv_dac_I2S_audioSettings()

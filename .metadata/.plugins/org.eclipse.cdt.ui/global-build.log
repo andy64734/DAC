@@ -1,18 +1,32 @@
-08:27:54 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
+10:33:26 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
 make all 
 make: Nothing to be done for `all'.
-08:27:54 **** Incremental Build of configuration Debug for project TLV ****
+10:33:27 **** Incremental Build of configuration Debug for project TLV ****
 make all 
-make: Nothing to be done for `all'.
-08:27:55 **** Incremental Build of configuration Debug for project DAC ****
+Building file: ../src/tlv.c
+Invoking: MCU GCC Compiler
+%cd%
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib" -I"C:/Users/winstona/Documents/CE4020/TLV/inc" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/tlv.d" -MT"src/tlv.o" -o "src/tlv.o" "../src/tlv.c"
+Finished building: ../src/tlv.c
+ 
+Building target: libTLV.a
+Invoking: MCU GCC Archiver
+arm-none-eabi-ar -r  "libTLV.a" @"objects.list"  
+c:\Ac6\SystemWorkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829\tools\compiler\bin\arm-none-eabi-ar.exe: creating libTLV.a
+Finished building target: libTLV.a
+ 
+10:33:28 **** Incremental Build of configuration Debug for project DAC ****
 make all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+%cd%
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/TLV/inc" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib" -I"C:/Users/winstona/Documents/CE4020/DAC/inc" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
 Building file: ../src/tlv_dac.c
 Invoking: MCU GCC Compiler
 %cd%
 arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/TLV/inc" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib" -I"C:/Users/winstona/Documents/CE4020/DAC/inc" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/tlv_dac.d" -MT"src/tlv_dac.o" -o "src/tlv_dac.o" "../src/tlv_dac.c"
-../src/tlv_dac.c:104:13: warning: '_tlv_dac_I2S_audioSettings' defined but not used [-Wunused-function]
- static void _tlv_dac_I2S_audioSettings()
-             ^
 Finished building: ../src/tlv_dac.c
  
 Building target: DAC.elf
@@ -25,5 +39,21 @@ Generating binary and Printing size information:
 arm-none-eabi-objcopy -O binary "DAC.elf" "DAC.bin"
 arm-none-eabi-size "DAC.elf"
    text	   data	    bss	    dec	    hex	filename
-   3900	   1092	   1056	   6048	   17a0	DAC.elf
+   4800	   1092	   1056	   6948	   1b24	DAC.elf
+ 
+20:28:54 **** Clean-only build of configuration Debug for project ADC ****
+make clean 
+rm -rf *
+ 
+20:28:55 **** Clean-only build of configuration Debug for project DAC ****
+make clean 
+rm -rf *
+ 
+20:28:55 **** Clean-only build of configuration Debug for project TLV ****
+make clean 
+rm -rf *
+ 
+20:28:55 **** Clean-only build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
+make clean 
+rm -rf *
  

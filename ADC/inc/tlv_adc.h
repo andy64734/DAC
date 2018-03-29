@@ -15,6 +15,6 @@
 
 #endif /* TLV_ADC_H_ */
 
-void tlv_dac_init();
+void tlv_adc_init();
 
 void tlv_adc_I2S_audioSettings();
