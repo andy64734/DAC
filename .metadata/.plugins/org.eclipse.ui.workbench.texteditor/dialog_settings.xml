@@ -2,29 +2,30 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Master" key="selection"/>
+		<item value="tlv_dac_I2S_audioSettings" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="tlv_dac_i2s_audiosettings"/>
+			<item value="tlv_initi2spins"/>
+			<item value="tlv_dac_write_reg"/>
+			<item value="tlv_dac"/>
 			<item value="MASTER"/>
 			<item value="master"/>
 			<item value="mode"/>
 			<item value="clockspeed"/>
-			<item value="i2c_init"/>
-			<item value="structinit"/>
-			<item value="i2c_initstruct"/>
-			<item value="assert_failed"/>
 		</list>
 		<list key="replacehistory">
+			<item value="tlv_i2c_write"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="257" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="381" key="DIALOG_HEIGHT"/>
-		<item value="1582" key="DIALOG_X_ORIGIN"/>
+		<item value="710" key="DIALOG_X_ORIGIN"/>
 		<item value="322" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>
