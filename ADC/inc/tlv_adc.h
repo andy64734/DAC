@@ -10,7 +10,7 @@
 
 #include <tlv.h>
 #ifndef TLV_H_
-#error "The tlv.h file is required for DAC functionality."
+#error "The tlv.h file is required for ADC functionality."
 #endif //TLV_H_
 
 #endif /* TLV_ADC_H_ */
