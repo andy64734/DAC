@@ -41,10 +41,19 @@
 // As a note, all registers in this API will follow the convention of using an
 // 8 bit value. The less 7 significant bits will indicate the page, and the
 // most significant one indicates whether to use bank 0 or 1.
+// The below registers are only available on bank 0.
 // Codec data-path setup register
 #define TLV_DATA_PATH_REG		(0x7)
 // Serial data interface control register B
 #define TLV_SDI_CR_B			(0x9)
+// Left-ADC PGA Gain Control Register
+#define TLV_LEFT_ADC_PGA_GAIN	(15)
+// Right-ADC PGA Gain Control Register
+#define TLV_RIGHT_ADC_PGA_GAIN	(16)
+// MIC1LP/LINE1LP to Left-ADC Control Register
+#define TLV_MIC1LP_LEFT_ADC		(19)
+// MIC1RP/LINE1RP to Right-ADC Control Register
+#define TLV_MIC1RP_RIGHT_ADC	(22)
 // DAC Power and Output Driver Control Register
 #define TLV_DAC_POWER			(37)
 // DAC Output Switching Control Register

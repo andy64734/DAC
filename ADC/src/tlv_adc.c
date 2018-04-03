@@ -44,4 +44,5 @@ static void _tlv_adc_I2S_audioSettings()
 
 static void _tlv_adc_initRegisters()
 {
+
 }
