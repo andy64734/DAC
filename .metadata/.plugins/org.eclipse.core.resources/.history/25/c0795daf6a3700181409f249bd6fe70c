@@ -9,7 +9,6 @@
 #define TLV_H_
 
 #include <inttypes.h>
-#include "stm32f4xx.h"
 
 /******************************************************************************
  * GPIO Pin Settings
