@@ -1,0 +1,24 @@
+/*
+ * tlv.h
+ *
+ *  Created on: Mar 5, 2018
+ *      Author: winstona
+ */
+
+#ifndef TLV_DAC_H_
+#define TLV_DAC_H_
+
+#include <tlv.h>
+#ifndef TLV_H_
+#error "The tlv.h file is required for DAC functionality."
+#endif //TLV_H_
+#include <inttypes.h>
+
+/**
+ * Enables all required interfaces for the functioning of the
+ * TLV codec chip in DAC mode. This include the I2C1 interface on
+ * GPIOB, and the I2S1 interface on GPIOA.
+ */
+void tlv_dac_init();
+
+#endif /* TLV_DAC_H_ */

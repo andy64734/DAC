@@ -10,14 +10,14 @@
 #include "stm32f4xx.h"
 
 /**
- *
- */
-static void _tlv_dac_I2S_audioSettings();
-
-/**
  * Initializes the registers for the I2C commponent.
  */
 static void _tlv_dac_initRegisters();
+
+/**
+ * Here we set method to make the proper audio settings for the TLV chip.
+ */
+static void _tlv_dac_I2S_audioSettings();
 
 void tlv_dac_init()
 {
@@ -40,12 +40,16 @@ void tlv_dac_init()
 	_tlv_dac_I2S_audioSettings();
 }
 
+/*
+ * To initialize I2S for the TLV chip, by setting the correct audio settings.
+ */
 static void _tlv_dac_I2S_audioSettings()
 {
 	I2S_InitTypeDef I2S_InitStructure;
 
 	SPI_I2S_DeInit(SPI2);
-	I2S_InitStructure.I2S_AudioFreq = 44100 * 2; // Audio is recorded from two channels, so this value must be twice the value in the PDM filter
+	// Audio is recorded from two channels
+	I2S_InitStructure.I2S_AudioFreq = 44100 * 2;
 	I2S_InitStructure.I2S_Standard = I2S_Standard_Phillips;
 	I2S_InitStructure.I2S_DataFormat = I2S_DataFormat_16b;
 	I2S_InitStructure.I2S_CPOL = I2S_CPOL_High;
@@ -54,7 +58,6 @@ static void _tlv_dac_I2S_audioSettings()
 	I2S_Init(SPI1, &I2S_InitStructure);
 
 }
-
 static void _tlv_dac_initRegisters()
 {
 	// Any convention of not using read-modify-write here is because
