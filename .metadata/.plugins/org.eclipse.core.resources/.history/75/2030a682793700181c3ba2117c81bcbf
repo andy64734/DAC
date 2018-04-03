@@ -16,17 +16,17 @@
 bool put(RingBuffer* buffer, uint16_t element)
 {
 	//Check space
-	if (hasSpace(&buffer) != 0)
-	{	//adding element to the buffer
-		buffer->buffer[buffer->tail] = element;
-		buffer->tail = (buffer->tail + 1) % BUF_SIZE;
-		return true;
-	}
-	else
-	{
-		// drop the pact
-		return false;
-	}
+	 if (hasSpace(&buffer) != 0)
+	 {	//adding element to the buffer
+	        buffer->buffer[buffer->tail] = element;
+	        buffer->tail = (buffer->tail + 1) % BUF_SIZE;
+	        return true;
+	 }
+	 else
+	 {
+		 // drop the pact
+		 	return false;
+	 }
 }
 /*
  * Here we have a method to get and remove characters into the buffer.
