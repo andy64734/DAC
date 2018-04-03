@@ -14,11 +14,16 @@
  * GPIO Pin Settings
  *****************************************************************************/
 
+#define TLV_RESET_PORT			(GPIOA)
+#define TLV_RESET_PIN			(4)
+
 #define SD_I2S_ALT_FUNC 		(GPIO_AF_SPI1)
 #define SD_I2C_ALT_FUNC 		(GPIO_AF_I2C1)
 
-#define SD_I2C_INTERFACE 		I2C1
-#define SD_I2S_INTERFACE 		SPI1
+#define SD_I2C_INTERFACE 		(I2C1)
+#define SD_I2S_INTERFACE 		(SPI1)
+
+#define SD_I2S_PORT				(GPIOA)
 
 #define SD_I2S_WS				(4)
 #define SD_I2S_CK				(5)
@@ -27,6 +32,8 @@
 #define SD_I2S_WS_PIN			(GPIO_Pin_4)
 #define SD_I2S_CK_PIN			(GPIO_Pin_5)
 #define SD_I2S_SD_PIN			(GPIO_Pin_6)
+
+#define SD_I2C_PORT				(GPIOB)
 
 #define SD_I2C_SCL 				(8)
 #define SD_I2C_SDA				(9)
@@ -106,8 +113,9 @@ void tlv_initI2sPins();
 void tlv_initI2cPins();
 
 /**
- *
+ * Sets up the TLV chip's reset pin, and then uses it to reset the TLV codec.
  */
+void tlv_initResetPin();
 
 /**
  * Enables all required interfaces for the functioning of the

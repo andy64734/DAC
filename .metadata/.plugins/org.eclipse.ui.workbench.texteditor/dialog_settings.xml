@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="tlv_dac_I2S_audioSettings" key="selection"/>
+		<item value="SD_" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="tlv_dac_i2s_audiosettings"/>
-			<item value="tlv_initi2spins"/>
-			<item value="tlv_dac_write_reg"/>
-			<item value="tlv_dac"/>
-			<item value="MASTER"/>
-			<item value="master"/>
-			<item value="mode"/>
-			<item value="clockspeed"/>
+			<item value="sd_"/>
+			<item value="sd_i2c_port"/>
+			<item value="GPIO_Set"/>
+			<item value="gpio_set"/>
+			<item value="gpio_setpins"/>
+			<item value="gpio_setpin"/>
+			<item value="gpio_set_pin"/>
+			<item value="@ref GPIO_TypeDef"/>
 		</list>
 		<list key="replacehistory">
 			<item value="tlv_i2c_write"/>
@@ -25,7 +25,7 @@
 		<item value="257" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="381" key="DIALOG_HEIGHT"/>
-		<item value="710" key="DIALOG_X_ORIGIN"/>
-		<item value="322" key="DIALOG_Y_ORIGIN"/>
+		<item value="1141" key="DIALOG_X_ORIGIN"/>
+		<item value="362" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

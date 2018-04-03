@@ -16,11 +16,11 @@ void tlv_initI2sPins()
 	GPIO_StructInit(&i2sPortSettings);
 	i2sPortSettings.GPIO_Mode = GPIO_Mode_AF;
 	i2sPortSettings.GPIO_Pin = SD_I2S_WS_PIN | SD_I2S_CK_PIN | SD_I2S_SD_PIN;
-	GPIO_Init(GPIOA, &i2sPortSettings);
+	GPIO_Init(SD_I2S_PORT, &i2sPortSettings);
 	// Now set up the alternate function for each the pins.
-	GPIO_PinAFConfig(GPIOA, SD_I2S_WS, SD_I2S_ALT_FUNC);
-	GPIO_PinAFConfig(GPIOA, SD_I2S_CK, SD_I2S_ALT_FUNC);
-	GPIO_PinAFConfig(GPIOA, SD_I2S_SD, SD_I2S_ALT_FUNC);
+	GPIO_PinAFConfig(SD_I2S_PORT, SD_I2S_WS, SD_I2S_ALT_FUNC);
+	GPIO_PinAFConfig(SD_I2S_PORT, SD_I2S_CK, SD_I2S_ALT_FUNC);
+	GPIO_PinAFConfig(SD_I2S_PORT, SD_I2S_SD, SD_I2S_ALT_FUNC);
 }
 
 void tlv_initI2cPins()
@@ -33,14 +33,26 @@ void tlv_initI2cPins()
 	// I2C standard requires pull-up resistors to avoid bus contention.
 	// However, external, strong 2.2 k-ohm resistors will help us out.
 	i2cPortSettings.GPIO_PuPd = GPIO_PuPd_NOPULL;
-	GPIO_Init(GPIOB, &i2cPortSettings);
-	GPIO_PinAFConfig(GPIOB, SD_I2C_SCL, SD_I2C_ALT_FUNC);
-	GPIO_PinAFConfig(GPIOB, SD_I2C_SDA, SD_I2C_ALT_FUNC);
+	GPIO_Init(SD_I2C_PORT, &i2cPortSettings);
+	GPIO_PinAFConfig(SD_I2C_PORT, SD_I2C_SCL, SD_I2C_ALT_FUNC);
+	GPIO_PinAFConfig(SD_I2C_PORT, SD_I2C_SDA, SD_I2C_ALT_FUNC);
 
 	I2C_InitTypeDef i2cInterfaceSettings;
 	I2C_StructInit(&i2cInterfaceSettings);
 }
 
+void tlv_initResetPin()
+{
+	GPIO_InitTypeDef resetPortSettings;
+	GPIO_StructInit(&resetPortSettings);
+	resetPortSettings.GPIO_Pin = (1 << TLV_RESET_PIN);
+	resetPortSettings.GPIO_Mode = GPIO_Mode_OUT;
+	GPIO_Init(SD_I2C_PORT, &resetPortSettings);
+
+	// Initiate the DAC reset.s
+	GPIO_ResetBits(TLV_RESET_PORT, 1 << TLV_RESET_PIN);
+	GPIO_SetBits(TLV_RESET_PORT, 1 << TLV_RESET_PIN);
+}
 
 void tlv_i2c_write(uint8_t address, uint8_t message)
 {

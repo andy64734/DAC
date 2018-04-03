@@ -33,6 +33,7 @@ void tlv_adc_init()
 
 	tlv_initI2sPins();
 	tlv_initI2cPins();
+	tlv_initResetPin();
 	_tlv_adc_initRegisters();
 	_tlv_adc_I2S_audioSettings();
 }

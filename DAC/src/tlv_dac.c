@@ -36,6 +36,7 @@ void tlv_dac_init()
 
 	tlv_initI2sPins();
 	tlv_initI2cPins();
+	tlv_initResetPin();
 	_tlv_dac_initRegisters();
 	_tlv_dac_I2S_audioSettings();
 }
