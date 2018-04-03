@@ -30,7 +30,7 @@ void SD_I2S_write(RingBuffer* I2S_buffer)
 void SD_I2S_read(SPI_TypeDef* SPIx, RingBuffer* I2S_buffer)
 {
 	while(!SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_RXNE));
-	put(I2S_buffer,SPI_I2S_ReceiveData(SPIx));
+	put(I2S_buffer, SPI_I2S_ReceiveData(SPIx));
 }
 
 void tlv_initI2cPins()
