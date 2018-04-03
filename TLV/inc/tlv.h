@@ -9,6 +9,7 @@
 #define TLV_H_
 
 #include <inttypes.h>
+#include "stm32f4xx.h"
 
 /******************************************************************************
  * GPIO Pin Settings
@@ -116,6 +117,16 @@ void tlv_initI2cPins();
  * Sets up the TLV chip's reset pin, and then uses it to reset the TLV codec.
  */
 void tlv_initResetPin();
+
+/**
+ * Here we have a method to write data to an I2S port from a ring buffer.
+ */
+void SD_I2S_write(RingBuffer* I2S_buffer);
+
+/**
+ * Here we have a method to read data into a ring buffer from a I2S port.
+ */
+void SD_I2S_read(SPI_TypeDef* SPIx);
 
 /**
  * Enables all required interfaces for the functioning of the

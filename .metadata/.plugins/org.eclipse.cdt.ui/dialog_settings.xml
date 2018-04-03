@@ -15,8 +15,6 @@
 		<item value="false" key="caseSensitive"/>
 		<item value="227191" key="searchFlags"/>
 		<list key="previousPatterns">
-			<item value="GPIOA"/>
-			<item value="gpiomode_typedef"/>
 			<item value="pinspack"/>
 			<item value="FunctionalState"/>
 		</list>

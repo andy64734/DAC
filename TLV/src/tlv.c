@@ -4,10 +4,8 @@
  *  Created on: Mar 5, 2018
  *      Author: winstona
  */
-
+#include <ringbuffer.h>
 #include <tlv.h>
-#include "stm32f4xx.h"
-#include "stm32f4xx_i2c.h"
 
 void tlv_initI2sPins()
 {
@@ -21,6 +19,18 @@ void tlv_initI2sPins()
 	GPIO_PinAFConfig(SD_I2S_PORT, SD_I2S_WS, SD_I2S_ALT_FUNC);
 	GPIO_PinAFConfig(SD_I2S_PORT, SD_I2S_CK, SD_I2S_ALT_FUNC);
 	GPIO_PinAFConfig(SD_I2S_PORT, SD_I2S_SD, SD_I2S_ALT_FUNC);
+}
+
+void SD_I2S_write(RingBuffer* I2S_buffer)
+{
+	while(!SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_TXE));
+	SPI_I2S_SendData(SPI2, get(I2S_buffer));
+}
+
+void SD_I2S_read(SPI_TypeDef* SPIx, RingBuffer* I2S_buffer)
+{
+	while(!SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_RXNE));
+	put(I2S_buffer, SPI_I2S_ReceiveData(SPIx));
 }
 
 void tlv_initI2cPins()

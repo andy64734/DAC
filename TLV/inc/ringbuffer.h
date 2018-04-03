@@ -11,21 +11,21 @@
 #include <stdbool.h>
 
 // Size of the buffer
-#define BUF_SIZE 50
+#define BUF_SIZE 1
 
 // buffer structure
 typedef struct{
 	uint8_t tail;
 	uint8_t head;
 	uint8_t empty;
-	char buffer[BUF_SIZE];
+	uint16_t buffer[BUF_SIZE];
 } RingBuffer;
 
 // put an element in a buffer
-bool put(RingBuffer*, char);
+bool put(RingBuffer*, uint16_t);
 
 // remove an element from the buffer
-char get(RingBuffer*);
+uint16_t get(RingBuffer*);
 
 // to check if the buffer is full
 int hasSpace(RingBuffer*);
