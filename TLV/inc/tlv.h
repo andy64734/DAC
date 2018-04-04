@@ -10,6 +10,7 @@
 
 #include <inttypes.h>
 #include "stm32f4xx.h"
+#include "ringbuffer.h"
 
 /******************************************************************************
  * GPIO Pin Settings
