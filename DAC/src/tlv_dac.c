@@ -50,13 +50,14 @@ static void _tlv_dac_I2S_audioSettings()
 
 	SPI_I2S_DeInit(SPI2);
 	// Audio is recorded from two channels
-	I2S_InitStructure.I2S_AudioFreq = 44100 * 2;
+	I2S_InitStructure.I2S_AudioFreq = 44100;
 	I2S_InitStructure.I2S_Standard = I2S_Standard_Phillips;
 	I2S_InitStructure.I2S_DataFormat = I2S_DataFormat_16b;
 	I2S_InitStructure.I2S_CPOL = I2S_CPOL_High;
 	I2S_InitStructure.I2S_Mode = I2S_Mode_MasterTx;
 	I2S_InitStructure.I2S_MCLKOutput = I2S_MCLKOutput_Enable;
 	I2S_Init(SPI1, &I2S_InitStructure);
+	I2S_Cmd(SPI1, ENABLE);
 
 }
 static void _tlv_dac_initRegisters()
@@ -65,6 +66,8 @@ static void _tlv_dac_initRegisters()
 	// registe values are by default, and that if not, we would want
 	// these register values to be reset anyway.
 
+	// Set the page to 0
+	tlv_i2c_write(TLV_PAGE_SELECT_REG, 0);
 	// Set the data paths.
 	tlv_i2c_write(TLV_DATA_PATH_REG, (TLV_LEFT_IN << TLV_LEFT_PATH)
 			| (TLV_RIGHT_IN << TLV_RIGHT_PATH));

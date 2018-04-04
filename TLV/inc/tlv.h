@@ -51,6 +51,8 @@
 // 8 bit value. The less 7 significant bits will indicate the page, and the
 // most significant one indicates whether to use bank 0 or 1.
 // The below registers are only available on bank 0.
+// Page Select register
+#define TLV_PAGE_SELECT_REG		(0)
 // Codec data-path setup register
 #define TLV_DATA_PATH_REG		(0x7)
 // Serial data interface control register B
