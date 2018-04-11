@@ -8,12 +8,18 @@
 #include "ringbuffer.h"
 #include <inttypes.h>
 #include <stdbool.h>
+
+void ringBufferInit(RingBuffer* buffer)
+{
+	buffer->head = 0;
+	buffer->tail = 0;
+}
 /*
  * Here we have a method put characters into the buffer.
  * @param buffer it is a structure type to access the correct ring buffer.
  * @param element it is the character.
  */
-bool put(RingBuffer* buffer, uint16_t element)
+bool put(RingBuffer* buffer, int16_t element)
 {
 	//Check space
 	if (hasSpace(&buffer) != 0)
@@ -32,7 +38,7 @@ bool put(RingBuffer* buffer, uint16_t element)
  * Here we have a method to get and remove characters into the buffer.
  * @param buffer it is a structure type to access the correct ring buffer.
  */
-uint16_t get(RingBuffer* buffer)
+int16_t get(RingBuffer* buffer)
 {
 	//check space
 	if (hasElement(&buffer) != 0)

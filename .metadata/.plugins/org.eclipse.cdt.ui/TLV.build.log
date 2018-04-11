@@ -1,17 +1,6 @@
-13:13:34 **** Incremental Build of configuration Debug for project TLV ****
+22:23:24 **** Incremental Build of configuration Debug for project TLV ****
 make all 
-'Building file: ../src/tlv.c'
-'Invoking: MCU GCC Compiler'
-C:\Users\sharana\Documents\Senior_Design\DAC\TLV\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/sharana/Documents/Senior_Design/DAC/nucleo-f446re_stdperiph_lib" -I"C:/Users/sharana/Documents/Senior_Design/DAC/TLV/inc" -I"C:/Users/sharana/Documents/Senior_Design/DAC/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/sharana/Documents/Senior_Design/DAC/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/sharana/Documents/Senior_Design/DAC/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/tlv.d" -MT"src/tlv.o" -o "src/tlv.o" "../src/tlv.c"
-'Finished building: ../src/tlv.c'
-' '
-'Building target: libTLV.a'
-'Invoking: MCU GCC Archiver'
-arm-none-eabi-ar -r  "libTLV.a" @"objects.list"  
-arm-none-eabi-ar: creating libTLV.a
-'Finished building target: libTLV.a'
-' '
+make: Nothing to be done for `all'.
 
-13:13:35 Build Finished (took 1s.418ms)
+22:23:24 Build Finished (took 141ms)
 
