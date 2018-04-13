@@ -2165,3 +2165,478 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2018-04-12 12:16:00.603 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_102
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-04-12 12:16:14.584
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\winstona'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2018-04-12 17:09:53.264 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_102
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-04-12 17:10:04.254
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\winstona'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2018-04-12 18:13:44.502
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select remote localhost:3333
+
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:235)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at fr.ac6.mcu.debug.launching.MCUGDBJtagDSFLaunchConfigurationDelegate.launch(MCUGDBJtagDSFLaunchConfigurationDelegate.java:101)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2018-04-12 18:13:44.505
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3333
+
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+
+!ENTRY org.eclipse.debug.core 4 2 2018-04-12 18:20:50.993
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.core".
+!STACK 0
+java.lang.NullPointerException
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:371)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:211)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:221)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBEventListener.readMemory(GDBEventListener.java:66)
+	at fr.ac6.mcu.debug.ui.views.periphRegister.PeriphRegisterTreeRegister.readValue(PeriphRegisterTreeRegister.java:166)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1113)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.gdbSuspendListener(IORegisterView.java:1149)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBEventListener.handleDebugEvents(GDBEventListener.java:118)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1161)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1197)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:441)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.core 4 125 2018-04-12 18:20:51.025
+!MESSAGE An exception occurred while dispatching debug events.
+!STACK 0
+java.lang.NullPointerException
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:371)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:211)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:221)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBEventListener.readMemory(GDBEventListener.java:66)
+	at fr.ac6.mcu.debug.ui.views.periphRegister.PeriphRegisterTreeRegister.readValue(PeriphRegisterTreeRegister.java:166)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1113)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.gdbSuspendListener(IORegisterView.java:1149)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBEventListener.handleDebugEvents(GDBEventListener.java:118)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1161)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1197)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:441)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2018-04-12 18:20:58.964
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select remote localhost:3333
+
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:235)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at fr.ac6.mcu.debug.launching.MCUGDBJtagDSFLaunchConfigurationDelegate.launch(MCUGDBJtagDSFLaunchConfigurationDelegate.java:101)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2018-04-12 18:20:58.965
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3333
+
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2018-04-12 18:21:11.331
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select remote localhost:3333
+
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:235)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at fr.ac6.mcu.debug.launching.MCUGDBJtagDSFLaunchConfigurationDelegate.launch(MCUGDBJtagDSFLaunchConfigurationDelegate.java:101)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2018-04-12 18:21:11.331
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3333
+
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2018-04-12 18:23:17.316
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select remote localhost:3333
+
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:235)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at fr.ac6.mcu.debug.launching.MCUGDBJtagDSFLaunchConfigurationDelegate.launch(MCUGDBJtagDSFLaunchConfigurationDelegate.java:101)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2018-04-12 18:23:17.316
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3333
+
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+
+!ENTRY org.eclipse.debug.core 4 2 2018-04-12 18:25:00.809
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.core".
+!STACK 0
+java.lang.NullPointerException
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:371)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:211)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:221)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBEventListener.readMemory(GDBEventListener.java:66)
+	at fr.ac6.mcu.debug.ui.views.periphRegister.PeriphRegisterTreeRegister.readValue(PeriphRegisterTreeRegister.java:166)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1113)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.gdbSuspendListener(IORegisterView.java:1149)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBEventListener.handleDebugEvents(GDBEventListener.java:118)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1161)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1197)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:441)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.core 4 125 2018-04-12 18:25:00.819
+!MESSAGE An exception occurred while dispatching debug events.
+!STACK 0
+java.lang.NullPointerException
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:371)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:211)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:221)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBEventListener.readMemory(GDBEventListener.java:66)
+	at fr.ac6.mcu.debug.ui.views.periphRegister.PeriphRegisterTreeRegister.readValue(PeriphRegisterTreeRegister.java:166)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1113)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.gdbSuspendListener(IORegisterView.java:1149)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBEventListener.handleDebugEvents(GDBEventListener.java:118)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1161)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1197)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:441)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.core 4 2 2018-04-12 18:25:34.499
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.core".
+!STACK 0
+java.lang.NullPointerException
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:371)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:211)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:221)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBEventListener.readMemory(GDBEventListener.java:66)
+	at fr.ac6.mcu.debug.ui.views.periphRegister.PeriphRegisterTreeRegister.readValue(PeriphRegisterTreeRegister.java:166)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1113)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.gdbSuspendListener(IORegisterView.java:1149)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBEventListener.handleDebugEvents(GDBEventListener.java:118)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1161)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1197)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:441)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.core 4 125 2018-04-12 18:25:34.506
+!MESSAGE An exception occurred while dispatching debug events.
+!STACK 0
+java.lang.NullPointerException
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:371)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:211)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:221)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBEventListener.readMemory(GDBEventListener.java:66)
+	at fr.ac6.mcu.debug.ui.views.periphRegister.PeriphRegisterTreeRegister.readValue(PeriphRegisterTreeRegister.java:166)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1113)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.gdbSuspendListener(IORegisterView.java:1149)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBEventListener.handleDebugEvents(GDBEventListener.java:118)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1161)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1197)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:441)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.core 4 2 2018-04-12 18:30:08.662
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.core".
+!STACK 0
+java.lang.NullPointerException
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:371)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:211)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:221)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBEventListener.readMemory(GDBEventListener.java:66)
+	at fr.ac6.mcu.debug.ui.views.periphRegister.PeriphRegisterTreeRegister.readValue(PeriphRegisterTreeRegister.java:166)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1113)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.gdbSuspendListener(IORegisterView.java:1149)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBEventListener.handleDebugEvents(GDBEventListener.java:118)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1161)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1197)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:441)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.core 4 125 2018-04-12 18:30:08.672
+!MESSAGE An exception occurred while dispatching debug events.
+!STACK 0
+java.lang.NullPointerException
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:371)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:211)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:221)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBEventListener.readMemory(GDBEventListener.java:66)
+	at fr.ac6.mcu.debug.ui.views.periphRegister.PeriphRegisterTreeRegister.readValue(PeriphRegisterTreeRegister.java:166)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1113)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.gdbSuspendListener(IORegisterView.java:1149)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBEventListener.handleDebugEvents(GDBEventListener.java:118)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1161)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1197)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:441)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.jface 4 2 2018-04-12 18:32:17.798
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jface".
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.valueOf(Unknown Source)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView$5.applyEditorValue(IORegisterView.java:519)
+	at org.eclipse.jface.viewers.CellEditor$1.run(CellEditor.java:336)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+	at org.eclipse.jface.viewers.CellEditor.fireApplyEditorValue(CellEditor.java:333)
+	at org.eclipse.jface.viewers.ComboBoxCellEditor.applyEditorValueAndDeactivate(ComboBoxCellEditor.java:277)
+	at org.eclipse.jface.viewers.ComboBoxCellEditor.focusLost(ComboBoxCellEditor.java:284)
+	at org.eclipse.jface.viewers.ComboBoxCellEditor$4.focusLost(ComboBoxCellEditor.java:173)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:143)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1137)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1122)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:788)
+	at org.eclipse.swt.custom.CCombo.handleFocus(CCombo.java:919)
+	at org.eclipse.swt.custom.CCombo$2.handleEvent(CCombo.java:147)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1266)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1112)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1137)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1118)
+	at org.eclipse.swt.widgets.Control.sendFocusEvent(Control.java:2863)
+	at org.eclipse.swt.widgets.Widget.wmSetFocus(Widget.java:2477)
+	at org.eclipse.swt.widgets.Control.WM_SETFOCUS(Control.java:5323)
+	at org.eclipse.swt.widgets.Tree.WM_SETFOCUS(Tree.java:7132)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4746)
+	at org.eclipse.swt.widgets.Tree.windowProc(Tree.java:6024)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5050)
+	at org.eclipse.swt.internal.win32.OS.SetFocus(Native Method)
+	at org.eclipse.swt.widgets.Tree.WM_LBUTTONDOWN(Tree.java:6703)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4712)
+	at org.eclipse.swt.widgets.Tree.windowProc(Tree.java:6024)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5050)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.debug.core 4 2 2018-04-12 19:20:44.180
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.core".
+!STACK 0
+java.lang.NullPointerException
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:371)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:211)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:221)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBEventListener.readMemory(GDBEventListener.java:66)
+	at fr.ac6.mcu.debug.ui.views.periphRegister.PeriphRegisterTreeRegister.readValue(PeriphRegisterTreeRegister.java:166)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1113)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.gdbSuspendListener(IORegisterView.java:1149)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBEventListener.handleDebugEvents(GDBEventListener.java:118)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1161)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1197)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:441)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.core 4 125 2018-04-12 19:20:44.191
+!MESSAGE An exception occurred while dispatching debug events.
+!STACK 0
+java.lang.NullPointerException
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:371)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:211)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:221)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBEventListener.readMemory(GDBEventListener.java:66)
+	at fr.ac6.mcu.debug.ui.views.periphRegister.PeriphRegisterTreeRegister.readValue(PeriphRegisterTreeRegister.java:166)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1113)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.gdbSuspendListener(IORegisterView.java:1149)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBEventListener.handleDebugEvents(GDBEventListener.java:118)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1161)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1197)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:441)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.core 4 2 2018-04-13 13:42:39.250
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.core".
+!STACK 0
+java.lang.NullPointerException
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:371)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:211)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:221)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBEventListener.readMemory(GDBEventListener.java:66)
+	at fr.ac6.mcu.debug.ui.views.periphRegister.PeriphRegisterTreeRegister.readValue(PeriphRegisterTreeRegister.java:166)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1113)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.gdbSuspendListener(IORegisterView.java:1149)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBEventListener.handleDebugEvents(GDBEventListener.java:118)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1161)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1197)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:441)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.core 4 125 2018-04-13 13:42:39.264
+!MESSAGE An exception occurred while dispatching debug events.
+!STACK 0
+java.lang.NullPointerException
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:371)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:211)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:221)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBEventListener.readMemory(GDBEventListener.java:66)
+	at fr.ac6.mcu.debug.ui.views.periphRegister.PeriphRegisterTreeRegister.readValue(PeriphRegisterTreeRegister.java:166)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1113)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.updateTreeFields(IORegisterView.java:1118)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.IORegisterView.gdbSuspendListener(IORegisterView.java:1149)
+	at fr.ac6.mcu.debug.ui.views.periphRegisterView.GDBEventListener.handleDebugEvents(GDBEventListener.java:118)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1161)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1197)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:441)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)

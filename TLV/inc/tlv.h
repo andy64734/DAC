@@ -80,6 +80,9 @@
 
 #define TLV_REG_MASK			(0x7F)
 
+// TODO Determine whether the address should be offset to make way
+// for the read/write bit. This may involve some documentation
+// research.
 #define TLV_I2C_ADDR			(0x18) // 7 bit address
 
 // Offsets for data paths in data path register.

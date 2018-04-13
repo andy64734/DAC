@@ -35,5 +35,10 @@ int main(void)
 			put(&theBuffer, regValue);
 			currTime++;
 		}
+		// Now, try to send elements to the DAC.
+		if (hasElement(&theBuffer))
+		{
+			SD_I2S_write(&theBuffer);
+		}
 	}
 }

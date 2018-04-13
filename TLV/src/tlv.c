@@ -47,8 +47,7 @@ void tlv_initI2cPins()
 	GPIO_PinAFConfig(SD_I2C_PORT, SD_I2C_SCL, SD_I2C_ALT_FUNC);
 	GPIO_PinAFConfig(SD_I2C_PORT, SD_I2C_SDA, SD_I2C_ALT_FUNC);
 
-	I2C_InitTypeDef i2cInterfaceSettings;
-	I2C_StructInit(&i2cInterfaceSettings);
+
 }
 
 void tlv_initResetPin()
@@ -70,7 +69,7 @@ void tlv_i2c_write(uint8_t address, uint8_t message)
 	// but just in case.
 	while (I2C_GetFlagStatus(SD_I2C_INTERFACE, I2C_FLAG_BUSY));
 	I2C_GenerateSTART(SD_I2C_INTERFACE, ENABLE);
-	I2C_Send7bitAddress(SD_I2C_INTERFACE, address, I2C_Direction_Transmitter);
+	I2C_Send7bitAddress(SD_I2C_INTERFACE, TLV_I2C_ADDR, I2C_Direction_Transmitter);
 	while (!I2C_CheckEvent(SD_I2C_INTERFACE,
 				I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED));
 	// Now send an address.
@@ -91,7 +90,7 @@ uint8_t tlv_i2c_read(uint8_t address)
 {
 	while (I2C_GetFlagStatus(SD_I2C_INTERFACE, I2C_FLAG_BUSY));
 	I2C_GenerateSTART(SD_I2C_INTERFACE, ENABLE);
-	I2C_Send7bitAddress(SD_I2C_INTERFACE, address, I2C_Direction_Receiver);
+	I2C_Send7bitAddress(SD_I2C_INTERFACE, TLV_I2C_ADDR, I2C_Direction_Receiver);
 	while (!I2C_CheckEvent(SD_I2C_INTERFACE,
 				I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED));
 	// Send an address, and wait to receive a byte back.

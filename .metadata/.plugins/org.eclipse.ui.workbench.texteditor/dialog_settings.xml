@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="address" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="address"/>
+			<item value="enable"/>
+			<item value="i2c_init"/>
+			<item value="i2c_initr"/>
 			<item value="empty"/>
 			<item value="TX buffer"/>
 			<item value="tlv_dac_i2s_audiosettings"/>
 			<item value="tlv_initi2spins"/>
-			<item value="tlv_dac_write_reg"/>
-			<item value="tlv_dac"/>
-			<item value="MASTER"/>
-			<item value="master"/>
 		</list>
 		<list key="replacehistory">
 			<item value="tlv_i2c_write"/>

@@ -26,17 +26,16 @@ void tlv_dac_init()
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_I2C1, ENABLE); // I2C interface
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_SPI1, ENABLE); // I2S interface
 
-	// Prepares the settings for the I2C radio.
+	tlv_initI2sPins();
+	tlv_initI2cPins();
+	tlv_initResetPin();
+
 	I2C_InitTypeDef i2cSettings;
 	I2C_StructInit(&i2cSettings);
 
 	// Initialize the I2C radio with the appropriate settings.
 	// The default settings in i2cSettings should be fine.
 	I2C_Init(SD_I2C_INTERFACE, &i2cSettings);
-
-	tlv_initI2sPins();
-	tlv_initI2cPins();
-	tlv_initResetPin();
 	_tlv_dac_initRegisters();
 	_tlv_dac_I2S_audioSettings();
 }
