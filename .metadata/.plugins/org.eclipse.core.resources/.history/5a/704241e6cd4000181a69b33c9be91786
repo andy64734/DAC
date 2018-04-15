@@ -35,17 +35,17 @@ void SD_I2S_read(SPI_TypeDef* SPIx, RingBuffer* I2S_buffer)
 
 void tlv_initI2cPins()
 {
-	GPIO_PinAFConfig(SD_I2C_PORT, SD_I2C_SCL, SD_I2C_ALT_FUNC);
-	GPIO_PinAFConfig(SD_I2C_PORT, SD_I2C_SDA, SD_I2C_ALT_FUNC);
 	// Set I2C alternate function settings
 	GPIO_InitTypeDef i2cPortSettings;
 	GPIO_StructInit(&i2cPortSettings);
 	i2cPortSettings.GPIO_Pin = SD_I2C_SCL_PIN | SD_I2C_SDA_PIN;
-	i2cPortSettings.GPIO_Mode = GPIO_Mode_AF;
+	i2cPortSettings.GPIO_Mode = GPIO_Mode_AF;a
 	// I2C standard requires pull-up resistors to avoid bus contention.
 	// However, external, strong 2.2 k-ohm resistors will help us out.
 	i2cPortSettings.GPIO_PuPd = GPIO_PuPd_NOPULL;
 	GPIO_Init(SD_I2C_PORT, &i2cPortSettings);
+	GPIO_PinAFConfig(SD_I2C_PORT, SD_I2C_SCL, SD_I2C_ALT_FUNC);
+	GPIO_PinAFConfig(SD_I2C_PORT, SD_I2C_SDA, SD_I2C_ALT_FUNC);
 
 
 }
@@ -60,7 +60,6 @@ void tlv_initResetPin()
 
 	// Initiate the DAC reset.s
 	GPIO_ResetBits(TLV_RESET_PORT, 1 << TLV_RESET_PIN);
-	// TODO Add some delay logic to ensure enough time for reset to work.
 	GPIO_SetBits(TLV_RESET_PORT, 1 << TLV_RESET_PIN);
 }
 
@@ -70,8 +69,6 @@ void tlv_i2c_write(uint8_t address, uint8_t message)
 	// but just in case.
 	while (I2C_GetFlagStatus(SD_I2C_INTERFACE, I2C_FLAG_BUSY));
 	I2C_GenerateSTART(SD_I2C_INTERFACE, ENABLE);
-	while (!I2C_CheckEvent(SD_I2C_INTERFACE,
-			I2C_EVENT_MASTER_MODE_SELECT));
 	I2C_Send7bitAddress(SD_I2C_INTERFACE, TLV_I2C_ADDR, I2C_Direction_Transmitter);
 	while (!I2C_CheckEvent(SD_I2C_INTERFACE,
 				I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED));

@@ -1,333 +1,24 @@
-17:44:57 **** Clean-only build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
-make clean 
-rm -rf *
- 
-17:44:58 **** Clean-only build of configuration Debug for project TLV ****
-make clean 
-rm -rf *
- 
-17:45:02 **** Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
+11:55:59 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
 make all 
-Building file: ../StdPeriph_Driver/src/misc.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/misc.d" -MT"StdPeriph_Driver/src/misc.o" -o "StdPeriph_Driver/src/misc.o" "../StdPeriph_Driver/src/misc.c"
-Finished building: ../StdPeriph_Driver/src/misc.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_adc.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_adc.d" -MT"StdPeriph_Driver/src/stm32f4xx_adc.o" -o "StdPeriph_Driver/src/stm32f4xx_adc.o" "../StdPeriph_Driver/src/stm32f4xx_adc.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_adc.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_can.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_can.d" -MT"StdPeriph_Driver/src/stm32f4xx_can.o" -o "StdPeriph_Driver/src/stm32f4xx_can.o" "../StdPeriph_Driver/src/stm32f4xx_can.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_can.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_cec.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_cec.d" -MT"StdPeriph_Driver/src/stm32f4xx_cec.o" -o "StdPeriph_Driver/src/stm32f4xx_cec.o" "../StdPeriph_Driver/src/stm32f4xx_cec.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_cec.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_crc.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_crc.d" -MT"StdPeriph_Driver/src/stm32f4xx_crc.o" -o "StdPeriph_Driver/src/stm32f4xx_crc.o" "../StdPeriph_Driver/src/stm32f4xx_crc.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_crc.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_cryp.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_cryp.d" -MT"StdPeriph_Driver/src/stm32f4xx_cryp.o" -o "StdPeriph_Driver/src/stm32f4xx_cryp.o" "../StdPeriph_Driver/src/stm32f4xx_cryp.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_cryp.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_cryp_aes.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_cryp_aes.d" -MT"StdPeriph_Driver/src/stm32f4xx_cryp_aes.o" -o "StdPeriph_Driver/src/stm32f4xx_cryp_aes.o" "../StdPeriph_Driver/src/stm32f4xx_cryp_aes.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_cryp_aes.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_cryp_des.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_cryp_des.d" -MT"StdPeriph_Driver/src/stm32f4xx_cryp_des.o" -o "StdPeriph_Driver/src/stm32f4xx_cryp_des.o" "../StdPeriph_Driver/src/stm32f4xx_cryp_des.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_cryp_des.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_cryp_tdes.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_cryp_tdes.d" -MT"StdPeriph_Driver/src/stm32f4xx_cryp_tdes.o" -o "StdPeriph_Driver/src/stm32f4xx_cryp_tdes.o" "../StdPeriph_Driver/src/stm32f4xx_cryp_tdes.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_cryp_tdes.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_dac.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_dac.d" -MT"StdPeriph_Driver/src/stm32f4xx_dac.o" -o "StdPeriph_Driver/src/stm32f4xx_dac.o" "../StdPeriph_Driver/src/stm32f4xx_dac.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_dac.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_dbgmcu.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_dbgmcu.d" -MT"StdPeriph_Driver/src/stm32f4xx_dbgmcu.o" -o "StdPeriph_Driver/src/stm32f4xx_dbgmcu.o" "../StdPeriph_Driver/src/stm32f4xx_dbgmcu.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_dbgmcu.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_dcmi.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_dcmi.d" -MT"StdPeriph_Driver/src/stm32f4xx_dcmi.o" -o "StdPeriph_Driver/src/stm32f4xx_dcmi.o" "../StdPeriph_Driver/src/stm32f4xx_dcmi.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_dcmi.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_dma.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_dma.d" -MT"StdPeriph_Driver/src/stm32f4xx_dma.o" -o "StdPeriph_Driver/src/stm32f4xx_dma.o" "../StdPeriph_Driver/src/stm32f4xx_dma.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_dma.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_dma2d.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_dma2d.d" -MT"StdPeriph_Driver/src/stm32f4xx_dma2d.o" -o "StdPeriph_Driver/src/stm32f4xx_dma2d.o" "../StdPeriph_Driver/src/stm32f4xx_dma2d.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_dma2d.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_dsi.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_dsi.d" -MT"StdPeriph_Driver/src/stm32f4xx_dsi.o" -o "StdPeriph_Driver/src/stm32f4xx_dsi.o" "../StdPeriph_Driver/src/stm32f4xx_dsi.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_dsi.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_exti.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_exti.d" -MT"StdPeriph_Driver/src/stm32f4xx_exti.o" -o "StdPeriph_Driver/src/stm32f4xx_exti.o" "../StdPeriph_Driver/src/stm32f4xx_exti.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_exti.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_flash.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_flash.d" -MT"StdPeriph_Driver/src/stm32f4xx_flash.o" -o "StdPeriph_Driver/src/stm32f4xx_flash.o" "../StdPeriph_Driver/src/stm32f4xx_flash.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_flash.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_flash_ramfunc.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_flash_ramfunc.d" -MT"StdPeriph_Driver/src/stm32f4xx_flash_ramfunc.o" -o "StdPeriph_Driver/src/stm32f4xx_flash_ramfunc.o" "../StdPeriph_Driver/src/stm32f4xx_flash_ramfunc.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_flash_ramfunc.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_fmc.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_fmc.d" -MT"StdPeriph_Driver/src/stm32f4xx_fmc.o" -o "StdPeriph_Driver/src/stm32f4xx_fmc.o" "../StdPeriph_Driver/src/stm32f4xx_fmc.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_fmc.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_fmip2c.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_fmip2c.d" -MT"StdPeriph_Driver/src/stm32f4xx_fmip2c.o" -o "StdPeriph_Driver/src/stm32f4xx_fmip2c.o" "../StdPeriph_Driver/src/stm32f4xx_fmip2c.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_fmip2c.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_fsmc.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_fsmc.d" -MT"StdPeriph_Driver/src/stm32f4xx_fsmc.o" -o "StdPeriph_Driver/src/stm32f4xx_fsmc.o" "../StdPeriph_Driver/src/stm32f4xx_fsmc.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_fsmc.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_gpio.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_gpio.d" -MT"StdPeriph_Driver/src/stm32f4xx_gpio.o" -o "StdPeriph_Driver/src/stm32f4xx_gpio.o" "../StdPeriph_Driver/src/stm32f4xx_gpio.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_gpio.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_hash.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_hash.d" -MT"StdPeriph_Driver/src/stm32f4xx_hash.o" -o "StdPeriph_Driver/src/stm32f4xx_hash.o" "../StdPeriph_Driver/src/stm32f4xx_hash.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_hash.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_hash_md5.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_hash_md5.d" -MT"StdPeriph_Driver/src/stm32f4xx_hash_md5.o" -o "StdPeriph_Driver/src/stm32f4xx_hash_md5.o" "../StdPeriph_Driver/src/stm32f4xx_hash_md5.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_hash_md5.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_hash_sha1.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_hash_sha1.d" -MT"StdPeriph_Driver/src/stm32f4xx_hash_sha1.o" -o "StdPeriph_Driver/src/stm32f4xx_hash_sha1.o" "../StdPeriph_Driver/src/stm32f4xx_hash_sha1.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_hash_sha1.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_i2c.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_i2c.d" -MT"StdPeriph_Driver/src/stm32f4xx_i2c.o" -o "StdPeriph_Driver/src/stm32f4xx_i2c.o" "../StdPeriph_Driver/src/stm32f4xx_i2c.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_i2c.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_iwdg.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_iwdg.d" -MT"StdPeriph_Driver/src/stm32f4xx_iwdg.o" -o "StdPeriph_Driver/src/stm32f4xx_iwdg.o" "../StdPeriph_Driver/src/stm32f4xx_iwdg.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_iwdg.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_lptim.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_lptim.d" -MT"StdPeriph_Driver/src/stm32f4xx_lptim.o" -o "StdPeriph_Driver/src/stm32f4xx_lptim.o" "../StdPeriph_Driver/src/stm32f4xx_lptim.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_lptim.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_ltdc.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_ltdc.d" -MT"StdPeriph_Driver/src/stm32f4xx_ltdc.o" -o "StdPeriph_Driver/src/stm32f4xx_ltdc.o" "../StdPeriph_Driver/src/stm32f4xx_ltdc.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_ltdc.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_pwr.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_pwr.d" -MT"StdPeriph_Driver/src/stm32f4xx_pwr.o" -o "StdPeriph_Driver/src/stm32f4xx_pwr.o" "../StdPeriph_Driver/src/stm32f4xx_pwr.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_pwr.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_qspi.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_qspi.d" -MT"StdPeriph_Driver/src/stm32f4xx_qspi.o" -o "StdPeriph_Driver/src/stm32f4xx_qspi.o" "../StdPeriph_Driver/src/stm32f4xx_qspi.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_qspi.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_rcc.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_rcc.d" -MT"StdPeriph_Driver/src/stm32f4xx_rcc.o" -o "StdPeriph_Driver/src/stm32f4xx_rcc.o" "../StdPeriph_Driver/src/stm32f4xx_rcc.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_rcc.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_rng.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_rng.d" -MT"StdPeriph_Driver/src/stm32f4xx_rng.o" -o "StdPeriph_Driver/src/stm32f4xx_rng.o" "../StdPeriph_Driver/src/stm32f4xx_rng.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_rng.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_rtc.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_rtc.d" -MT"StdPeriph_Driver/src/stm32f4xx_rtc.o" -o "StdPeriph_Driver/src/stm32f4xx_rtc.o" "../StdPeriph_Driver/src/stm32f4xx_rtc.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_rtc.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_sai.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_sai.d" -MT"StdPeriph_Driver/src/stm32f4xx_sai.o" -o "StdPeriph_Driver/src/stm32f4xx_sai.o" "../StdPeriph_Driver/src/stm32f4xx_sai.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_sai.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_sdio.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_sdio.d" -MT"StdPeriph_Driver/src/stm32f4xx_sdio.o" -o "StdPeriph_Driver/src/stm32f4xx_sdio.o" "../StdPeriph_Driver/src/stm32f4xx_sdio.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_sdio.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_spdifrx.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_spdifrx.d" -MT"StdPeriph_Driver/src/stm32f4xx_spdifrx.o" -o "StdPeriph_Driver/src/stm32f4xx_spdifrx.o" "../StdPeriph_Driver/src/stm32f4xx_spdifrx.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_spdifrx.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_spi.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_spi.d" -MT"StdPeriph_Driver/src/stm32f4xx_spi.o" -o "StdPeriph_Driver/src/stm32f4xx_spi.o" "../StdPeriph_Driver/src/stm32f4xx_spi.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_spi.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_syscfg.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_syscfg.d" -MT"StdPeriph_Driver/src/stm32f4xx_syscfg.o" -o "StdPeriph_Driver/src/stm32f4xx_syscfg.o" "../StdPeriph_Driver/src/stm32f4xx_syscfg.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_syscfg.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_tim.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_tim.d" -MT"StdPeriph_Driver/src/stm32f4xx_tim.o" -o "StdPeriph_Driver/src/stm32f4xx_tim.o" "../StdPeriph_Driver/src/stm32f4xx_tim.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_tim.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_usart.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_usart.d" -MT"StdPeriph_Driver/src/stm32f4xx_usart.o" -o "StdPeriph_Driver/src/stm32f4xx_usart.o" "../StdPeriph_Driver/src/stm32f4xx_usart.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_usart.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f4xx_wwdg.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_wwdg.d" -MT"StdPeriph_Driver/src/stm32f4xx_wwdg.o" -o "StdPeriph_Driver/src/stm32f4xx_wwdg.o" "../StdPeriph_Driver/src/stm32f4xx_wwdg.c"
-Finished building: ../StdPeriph_Driver/src/stm32f4xx_wwdg.c
- 
-Building target: libnucleo-f446re_stdperiph_lib.a
-Invoking: MCU GCC Archiver
-arm-none-eabi-ar -r  "libnucleo-f446re_stdperiph_lib.a" @"objects.list"  
-c:\Ac6\SystemWorkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829\tools\compiler\bin\arm-none-eabi-ar.exe: creating libnucleo-f446re_stdperiph_lib.a
-Finished building target: libnucleo-f446re_stdperiph_lib.a
- 
-17:45:55 **** Build of configuration Debug for project TLV ****
+make: Nothing to be done for `all'.
+11:55:59 **** Incremental Build of configuration Debug for project TLV ****
 make all 
-Building file: ../src/ringbuffer.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib" -I"C:/Users/winstona/Documents/CE4020/TLV/inc" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/ringbuffer.d" -MT"src/ringbuffer.o" -o "src/ringbuffer.o" "../src/ringbuffer.c"
-../src/ringbuffer.c: In function 'put':
-../src/ringbuffer.c:25:15: warning: passing argument 1 of 'hasSpace' from incompatible pointer type [-Wincompatible-pointer-types]
-  if (hasSpace(&buffer) != 0)
-               ^
-In file included from ../src/ringbuffer.c:8:0:
-C:/Users/winstona/Documents/CE4020/TLV/inc/ringbuffer.h:32:5: note: expected 'RingBuffer * {aka struct <anonymous> *}' but argument is of type 'RingBuffer ** {aka struct <anonymous> **}'
- int hasSpace(RingBuffer*);
-     ^
-../src/ringbuffer.c: In function 'get':
-../src/ringbuffer.c:44:17: warning: passing argument 1 of 'hasElement' from incompatible pointer type [-Wincompatible-pointer-types]
-  if (hasElement(&buffer) != 0)
-                 ^
-In file included from ../src/ringbuffer.c:8:0:
-C:/Users/winstona/Documents/CE4020/TLV/inc/ringbuffer.h:35:5: note: expected 'RingBuffer * {aka struct <anonymous> *}' but argument is of type 'RingBuffer ** {aka struct <anonymous> **}'
- int hasElement(RingBuffer*);
-     ^
-Finished building: ../src/ringbuffer.c
- 
 Building file: ../src/tlv.c
 Invoking: MCU GCC Compiler
 %cd%
 arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib" -I"C:/Users/winstona/Documents/CE4020/TLV/inc" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/tlv.d" -MT"src/tlv.o" -o "src/tlv.o" "../src/tlv.c"
 ../src/tlv.c: In function 'tlv_initI2cPins':
-../src/tlv.c:52:11: warning: passing argument 1 of 'I2C_Init' from incompatible pointer type [-Wincompatible-pointer-types]
-  I2C_Init(&i2cInterfaceSettings);
-           ^
-In file included from C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc/stm32f4xx_conf.h:41:0,
-                 from C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device/stm32f4xx.h:11412,
-                 from C:/Users/winstona/Documents/CE4020/TLV/inc/tlv.h:12,
-                 from ../src/tlv.c:8:
-C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc/stm32f4xx_i2c.h:549:6: note: expected 'I2C_TypeDef * {aka struct <anonymous> *}' but argument is of type 'I2C_InitTypeDef * {aka struct <anonymous> *}'
- void I2C_Init(I2C_TypeDef* I2Cx, I2C_InitTypeDef* I2C_InitStruct);
-      ^
-../src/tlv.c:52:2: error: too few arguments to function 'I2C_Init'
-  I2C_Init(&i2cInterfaceSettings);
-  ^
-In file included from C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc/stm32f4xx_conf.h:41:0,
-                 from C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device/stm32f4xx.h:11412,
-                 from C:/Users/winstona/Documents/CE4020/TLV/inc/tlv.h:12,
-                 from ../src/tlv.c:8:
-C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc/stm32f4xx_i2c.h:549:6: note: declared here
- void I2C_Init(I2C_TypeDef* I2Cx, I2C_InitTypeDef* I2C_InitStruct);
-      ^
+../src/tlv.c:42:43: error: unknown type name 'a'
+  i2cPortSettings.GPIO_Mode = GPIO_Mode_AF;a
+                                           ^
+../src/tlv.c:45:17: error: expected '=', ',', ';', 'asm' or '__attribute__' before '.' token
+  i2cPortSettings.GPIO_PuPd = GPIO_PuPd_NOPULL;
+                 ^
 make: *** [src/tlv.o] Error 1
-17:45:58 **** Incremental Build of configuration Debug for project DAC ****
-make all 
-Building target: DAC.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\winstona\Documents\CE4020\TLV\Debug" -L"C:\Users\winstona\Documents\CE4020\nucleo-f446re_stdperiph_lib\Debug" -T"C:\Users\winstona\Documents\CE4020\DAC\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "DAC.elf" @"objects.list"  -lTLV -lm -lnucleo-f446re_stdperiph_lib
-c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/bin/ld.exe: cannot find -lTLV
-collect2.exe: error: ld returned 1 exit status
-make: *** [DAC.elf] Error 1
-17:46:35 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
+11:56:11 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
 make all 
 make: Nothing to be done for `all'.
-17:46:36 **** Incremental Build of configuration Debug for project TLV ****
+11:56:12 **** Incremental Build of configuration Debug for project TLV ****
 make all 
 Building file: ../src/tlv.c
 Invoking: MCU GCC Compiler
@@ -341,281 +32,7 @@ arm-none-eabi-ar -r  "libTLV.a" @"objects.list"
 c:\Ac6\SystemWorkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829\tools\compiler\bin\arm-none-eabi-ar.exe: creating libTLV.a
 Finished building target: libTLV.a
  
-17:46:37 **** Incremental Build of configuration Debug for project DAC ****
-make all 
-Building target: DAC.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\winstona\Documents\CE4020\TLV\Debug" -L"C:\Users\winstona\Documents\CE4020\nucleo-f446re_stdperiph_lib\Debug" -T"C:\Users\winstona\Documents\CE4020\DAC\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "DAC.elf" @"objects.list"  -lTLV -lm -lnucleo-f446re_stdperiph_lib
-Finished building target: DAC.elf
- 
-make --no-print-directory post-build
-Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "DAC.elf" "DAC.bin"
-arm-none-eabi-size "DAC.elf"
-   text	   data	    bss	    dec	    hex	filename
-  13444	   1092	   1056	  15592	   3ce8	DAC.elf
- 
-17:46:44 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
-make all 
-make: Nothing to be done for `all'.
-17:46:44 **** Incremental Build of configuration Debug for project TLV ****
-make all 
-make: Nothing to be done for `all'.
-17:46:44 **** Incremental Build of configuration Debug for project DAC ****
-make all 
-make: Nothing to be done for `all'.
-17:56:37 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
-make all 
-make: Nothing to be done for `all'.
-17:56:37 **** Incremental Build of configuration Debug for project TLV ****
-make all 
-make: Nothing to be done for `all'.
-17:56:38 **** Incremental Build of configuration Debug for project DAC ****
-make all 
-make: Nothing to be done for `all'.
-17:58:14 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
-make all 
-make: Nothing to be done for `all'.
-17:58:14 **** Incremental Build of configuration Debug for project TLV ****
-make all 
-make: Nothing to be done for `all'.
-17:58:14 **** Incremental Build of configuration Debug for project DAC ****
-make all 
-make: Nothing to be done for `all'.
-18:12:43 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
-make all 
-make: Nothing to be done for `all'.
-18:12:43 **** Incremental Build of configuration Debug for project TLV ****
-make all 
-make: Nothing to be done for `all'.
-18:12:43 **** Incremental Build of configuration Debug for project DAC ****
-make all 
-make: Nothing to be done for `all'.
-18:13:40 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
-make all 
-make: Nothing to be done for `all'.
-18:13:41 **** Incremental Build of configuration Debug for project TLV ****
-make all 
-make: Nothing to be done for `all'.
-18:13:41 **** Incremental Build of configuration Debug for project DAC ****
-make all 
-make: Nothing to be done for `all'.
-18:13:41 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
-make all 
-make: Nothing to be done for `all'.
-18:13:42 **** Incremental Build of configuration Debug for project TLV ****
-make all 
-make: Nothing to be done for `all'.
-18:13:42 **** Incremental Build of configuration Debug for project DAC ****
-make all 
-make: Nothing to be done for `all'.
-18:13:58 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
-make all 
-make: Nothing to be done for `all'.
-18:13:59 **** Incremental Build of configuration Debug for project TLV ****
-make all 
-make: Nothing to be done for `all'.
-18:13:59 **** Incremental Build of configuration Debug for project DAC ****
-make all 
-make: Nothing to be done for `all'.
-18:17:44 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
-make all 
-make: Nothing to be done for `all'.
-18:17:44 **** Incremental Build of configuration Debug for project TLV ****
-make all 
-make: Nothing to be done for `all'.
-18:17:44 **** Incremental Build of configuration Debug for project DAC ****
-make all 
-make: Nothing to be done for `all'.
-18:20:55 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
-make all 
-make: Nothing to be done for `all'.
-18:20:55 **** Incremental Build of configuration Debug for project TLV ****
-make all 
-make: Nothing to be done for `all'.
-18:20:55 **** Incremental Build of configuration Debug for project DAC ****
-make all 
-make: Nothing to be done for `all'.
-18:20:56 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
-make all 
-make: Nothing to be done for `all'.
-18:20:56 **** Incremental Build of configuration Debug for project TLV ****
-make all 
-make: Nothing to be done for `all'.
-18:20:56 **** Incremental Build of configuration Debug for project DAC ****
-make all 
-make: Nothing to be done for `all'.
-18:21:07 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
-make all 
-make: Nothing to be done for `all'.
-18:21:08 **** Incremental Build of configuration Debug for project TLV ****
-make all 
-make: Nothing to be done for `all'.
-18:21:08 **** Incremental Build of configuration Debug for project DAC ****
-make all 
-make: Nothing to be done for `all'.
-18:21:08 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
-make all 
-make: Nothing to be done for `all'.
-18:21:08 **** Incremental Build of configuration Debug for project TLV ****
-make all 
-make: Nothing to be done for `all'.
-18:21:09 **** Incremental Build of configuration Debug for project DAC ****
-make all 
-make: Nothing to be done for `all'.
-18:21:20 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
-make all 
-make: Nothing to be done for `all'.
-18:21:20 **** Incremental Build of configuration Debug for project TLV ****
-make all 
-make: Nothing to be done for `all'.
-18:21:20 **** Incremental Build of configuration Debug for project DAC ****
-make all 
-make: Nothing to be done for `all'.
-18:22:22 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
-make all 
-make: Nothing to be done for `all'.
-18:22:23 **** Incremental Build of configuration Debug for project TLV ****
-make all 
-make: Nothing to be done for `all'.
-18:22:23 **** Incremental Build of configuration Debug for project DAC ****
-make all 
-make: Nothing to be done for `all'.
-18:23:14 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
-make all 
-make: Nothing to be done for `all'.
-18:23:15 **** Incremental Build of configuration Debug for project TLV ****
-make all 
-make: Nothing to be done for `all'.
-18:23:15 **** Incremental Build of configuration Debug for project DAC ****
-make all 
-make: Nothing to be done for `all'.
-18:23:30 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
-make all 
-make: Nothing to be done for `all'.
-18:23:30 **** Incremental Build of configuration Debug for project TLV ****
-make all 
-make: Nothing to be done for `all'.
-18:23:30 **** Incremental Build of configuration Debug for project DAC ****
-make all 
-make: Nothing to be done for `all'.
-18:25:02 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
-make all 
-make: Nothing to be done for `all'.
-18:25:02 **** Incremental Build of configuration Debug for project TLV ****
-make all 
-make: Nothing to be done for `all'.
-18:25:02 **** Incremental Build of configuration Debug for project DAC ****
-make all 
-make: Nothing to be done for `all'.
-18:25:35 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
-make all 
-make: Nothing to be done for `all'.
-18:25:36 **** Incremental Build of configuration Debug for project TLV ****
-make all 
-make: Nothing to be done for `all'.
-18:25:36 **** Incremental Build of configuration Debug for project DAC ****
-make all 
-make: Nothing to be done for `all'.
-18:30:30 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
-make all 
-make: Nothing to be done for `all'.
-18:30:30 **** Incremental Build of configuration Debug for project TLV ****
-make all 
-make: Nothing to be done for `all'.
-18:30:30 **** Incremental Build of configuration Debug for project DAC ****
-make all 
-make: Nothing to be done for `all'.
-19:09:09 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
-make all 
-make: Nothing to be done for `all'.
-19:09:09 **** Incremental Build of configuration Debug for project TLV ****
-make all 
-make: Nothing to be done for `all'.
-19:09:09 **** Incremental Build of configuration Debug for project DAC ****
-make all 
-make: Nothing to be done for `all'.
-19:09:49 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
-make all 
-make: Nothing to be done for `all'.
-19:09:49 **** Incremental Build of configuration Debug for project TLV ****
-make all 
-make: Nothing to be done for `all'.
-19:09:49 **** Incremental Build of configuration Debug for project DAC ****
-make all 
-make: Nothing to be done for `all'.
-19:11:42 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
-make all 
-make: Nothing to be done for `all'.
-19:11:42 **** Incremental Build of configuration Debug for project TLV ****
-make all 
-make: Nothing to be done for `all'.
-19:11:42 **** Incremental Build of configuration Debug for project DAC ****
-make all 
-make: Nothing to be done for `all'.
-19:12:38 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
-make all 
-make: Nothing to be done for `all'.
-19:12:39 **** Incremental Build of configuration Debug for project TLV ****
-make all 
-make: Nothing to be done for `all'.
-19:12:39 **** Incremental Build of configuration Debug for project DAC ****
-make all 
-make: Nothing to be done for `all'.
-19:13:41 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
-make all 
-make: Nothing to be done for `all'.
-19:13:41 **** Incremental Build of configuration Debug for project TLV ****
-make all 
-make: Nothing to be done for `all'.
-19:13:41 **** Incremental Build of configuration Debug for project DAC ****
-make all 
-make: Nothing to be done for `all'.
-19:14:17 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
-make all 
-make: Nothing to be done for `all'.
-19:14:18 **** Incremental Build of configuration Debug for project TLV ****
-make all 
-make: Nothing to be done for `all'.
-19:14:18 **** Incremental Build of configuration Debug for project DAC ****
-make all 
-make: Nothing to be done for `all'.
-19:15:02 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
-make all 
-make: Nothing to be done for `all'.
-19:15:02 **** Incremental Build of configuration Debug for project TLV ****
-make all 
-make: Nothing to be done for `all'.
-19:15:02 **** Incremental Build of configuration Debug for project DAC ****
-make all 
-make: Nothing to be done for `all'.
-19:17:09 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
-make all 
-make: Nothing to be done for `all'.
-19:17:09 **** Incremental Build of configuration Debug for project TLV ****
-make all 
-make: Nothing to be done for `all'.
-19:17:09 **** Incremental Build of configuration Debug for project DAC ****
-make all 
-make: Nothing to be done for `all'.
-19:17:56 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
-make all 
-make: Nothing to be done for `all'.
-19:17:56 **** Incremental Build of configuration Debug for project TLV ****
-make all 
-Building file: ../src/tlv.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib" -I"C:/Users/winstona/Documents/CE4020/TLV/inc" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/tlv.d" -MT"src/tlv.o" -o "src/tlv.o" "../src/tlv.c"
-Finished building: ../src/tlv.c
- 
-Building target: libTLV.a
-Invoking: MCU GCC Archiver
-arm-none-eabi-ar -r  "libTLV.a" @"objects.list"  
-c:\Ac6\SystemWorkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829\tools\compiler\bin\arm-none-eabi-ar.exe: creating libTLV.a
-Finished building target: libTLV.a
- 
-19:17:58 **** Incremental Build of configuration Debug for project DAC ****
+11:56:12 **** Incremental Build of configuration Debug for project DAC ****
 make all 
 Building target: DAC.elf
 Invoking: MCU GCC Linker
@@ -629,32 +46,194 @@ arm-none-eabi-size "DAC.elf"
    text	   data	    bss	    dec	    hex	filename
   13420	   1092	   1056	  15568	   3cd0	DAC.elf
  
-19:18:04 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
+11:56:16 **** Incremental Build of configuration Debug for project TLV ****
 make all 
 make: Nothing to be done for `all'.
-19:18:05 **** Incremental Build of configuration Debug for project TLV ****
+11:56:16 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
 make all 
 make: Nothing to be done for `all'.
-19:18:05 **** Incremental Build of configuration Debug for project DAC ****
+11:56:16 **** Incremental Build of configuration Debug for project DAC ****
 make all 
 make: Nothing to be done for `all'.
-13:23:09 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
+11:57:06 **** Incremental Build of configuration Debug for project TLV ****
 make all 
 make: Nothing to be done for `all'.
-13:23:10 **** Incremental Build of configuration Debug for project TLV ****
+11:57:07 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
 make all 
 make: Nothing to be done for `all'.
-13:23:10 **** Incremental Build of configuration Debug for project DAC ****
+11:57:07 **** Incremental Build of configuration Debug for project DAC ****
 make all 
 make: Nothing to be done for `all'.
-13:24:20 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
+11:58:38 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
 make all 
 make: Nothing to be done for `all'.
-13:24:21 **** Incremental Build of configuration Debug for project TLV ****
+11:58:38 **** Incremental Build of configuration Debug for project TLV ****
+make all 
+Building file: ../src/tlv.c
+Invoking: MCU GCC Compiler
+%cd%
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib" -I"C:/Users/winstona/Documents/CE4020/TLV/inc" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/tlv.d" -MT"src/tlv.o" -o "src/tlv.o" "../src/tlv.c"
+Finished building: ../src/tlv.c
+ 
+Building target: libTLV.a
+Invoking: MCU GCC Archiver
+arm-none-eabi-ar -r  "libTLV.a" @"objects.list"  
+c:\Ac6\SystemWorkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829\tools\compiler\bin\arm-none-eabi-ar.exe: creating libTLV.a
+Finished building target: libTLV.a
+ 
+11:58:39 **** Incremental Build of configuration Debug for project DAC ****
+make all 
+Building target: DAC.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\winstona\Documents\CE4020\TLV\Debug" -L"C:\Users\winstona\Documents\CE4020\nucleo-f446re_stdperiph_lib\Debug" -T"C:\Users\winstona\Documents\CE4020\DAC\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "DAC.elf" @"objects.list"  -lTLV -lm -lnucleo-f446re_stdperiph_lib
+Finished building target: DAC.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "DAC.elf" "DAC.bin"
+arm-none-eabi-size "DAC.elf"
+   text	   data	    bss	    dec	    hex	filename
+  13420	   1092	   1056	  15568	   3cd0	DAC.elf
+ 
+11:58:46 **** Incremental Build of configuration Debug for project TLV ****
 make all 
 make: Nothing to be done for `all'.
-13:24:21 **** Incremental Build of configuration Debug for project DAC ****
+11:58:47 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
 make all 
+make: Nothing to be done for `all'.
+11:58:47 **** Incremental Build of configuration Debug for project DAC ****
+make all 
+make: Nothing to be done for `all'.
+12:09:49 **** Incremental Build of configuration Debug for project TLV ****
+make all 
+make: Nothing to be done for `all'.
+12:09:49 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+12:09:50 **** Incremental Build of configuration Debug for project DAC ****
+make all 
+make: Nothing to be done for `all'.
+12:10:47 **** Incremental Build of configuration Debug for project TLV ****
+make all 
+make: Nothing to be done for `all'.
+12:10:47 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+12:10:47 **** Incremental Build of configuration Debug for project DAC ****
+make all 
+make: Nothing to be done for `all'.
+12:18:50 **** Incremental Build of configuration Debug for project TLV ****
+make all 
+make: Nothing to be done for `all'.
+12:18:50 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+12:18:50 **** Incremental Build of configuration Debug for project DAC ****
+make all 
+make: Nothing to be done for `all'.
+12:19:56 **** Incremental Build of configuration Debug for project TLV ****
+make all 
+make: Nothing to be done for `all'.
+12:19:56 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+12:19:57 **** Incremental Build of configuration Debug for project DAC ****
+make all 
+make: Nothing to be done for `all'.
+12:20:40 **** Incremental Build of configuration Debug for project TLV ****
+make all 
+make: Nothing to be done for `all'.
+12:20:40 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+12:20:40 **** Incremental Build of configuration Debug for project DAC ****
+make all 
+make: Nothing to be done for `all'.
+12:23:06 **** Incremental Build of configuration Debug for project TLV ****
+make all 
+make: Nothing to be done for `all'.
+12:23:06 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+12:23:07 **** Incremental Build of configuration Debug for project DAC ****
+make all 
+make: Nothing to be done for `all'.
+12:23:49 **** Incremental Build of configuration Debug for project TLV ****
+make all 
+make: Nothing to be done for `all'.
+12:23:49 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+12:23:49 **** Incremental Build of configuration Debug for project DAC ****
+make all 
+make: Nothing to be done for `all'.
+13:56:04 **** Incremental Build of configuration Debug for project TLV ****
+make all 
+make: Nothing to be done for `all'.
+13:56:05 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+13:56:05 **** Incremental Build of configuration Debug for project DAC ****
+make all 
+make: Nothing to be done for `all'.
+14:05:28 **** Incremental Build of configuration Debug for project TLV ****
+make all 
+make: Nothing to be done for `all'.
+14:05:28 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+14:05:28 **** Incremental Build of configuration Debug for project DAC ****
+make all 
+make: Nothing to be done for `all'.
+14:13:26 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+14:13:27 **** Incremental Build of configuration Debug for project TLV ****
+make all 
+Building file: ../src/tlv.c
+Invoking: MCU GCC Compiler
+%cd%
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib" -I"C:/Users/winstona/Documents/CE4020/TLV/inc" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/tlv.d" -MT"src/tlv.o" -o "src/tlv.o" "../src/tlv.c"
+Finished building: ../src/tlv.c
+ 
+Building target: libTLV.a
+Invoking: MCU GCC Archiver
+arm-none-eabi-ar -r  "libTLV.a" @"objects.list"  
+c:\Ac6\SystemWorkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829\tools\compiler\bin\arm-none-eabi-ar.exe: creating libTLV.a
+Finished building target: libTLV.a
+ 
+14:13:29 **** Clean-only build of configuration Debug for project DAC ****
+make clean 
+rm -rf *
+c:\Ac6\SystemWorkbench\plugins\fr.ac6.mcu.externaltools.win32_1.3.0.201507241045\tools\make\rm.exe: cannot remove `DAC.elf': Permission denied
+make: [clean] Error 1 (ignored)
+ 
+14:13:30 **** Incremental Build of configuration Debug for project DAC ****
+make all 
+Building file: ../startup/startup_stm32.s
+Invoking: MCU GCC Assembler
+%cd%
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib" -I"C:/Users/winstona/Documents/CE4020/DAC/inc" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/winstona/Documents/CE4020/TLV/inc" -g -o "startup/startup_stm32.o" "../startup/startup_stm32.s"
+Finished building: ../startup/startup_stm32.s
+ 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+%cd%
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/TLV/inc" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib" -I"C:/Users/winstona/Documents/CE4020/DAC/inc" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/syscalls.c
+Invoking: MCU GCC Compiler
+%cd%
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/TLV/inc" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib" -I"C:/Users/winstona/Documents/CE4020/DAC/inc" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/syscalls.d" -MT"src/syscalls.o" -o "src/syscalls.o" "../src/syscalls.c"
+Finished building: ../src/syscalls.c
+ 
+Building file: ../src/system_stm32f4xx.c
+Invoking: MCU GCC Compiler
+%cd%
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/TLV/inc" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib" -I"C:/Users/winstona/Documents/CE4020/DAC/inc" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/system_stm32f4xx.d" -MT"src/system_stm32f4xx.o" -o "src/system_stm32f4xx.o" "../src/system_stm32f4xx.c"
+Finished building: ../src/system_stm32f4xx.c
+ 
 Building file: ../src/tlv_dac.c
 Invoking: MCU GCC Compiler
 %cd%
@@ -671,12 +250,98 @@ Generating binary and Printing size information:
 arm-none-eabi-objcopy -O binary "DAC.elf" "DAC.bin"
 arm-none-eabi-size "DAC.elf"
    text	   data	    bss	    dec	    hex	filename
-  13420	   1092	   1056	  15568	   3cd0	DAC.elf
+  13436	   1092	   1056	  15584	   3ce0	DAC.elf
  
-13:35:35 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
+14:13:45 **** Incremental Build of configuration Debug for project TLV ****
 make all 
 make: Nothing to be done for `all'.
-13:35:35 **** Incremental Build of configuration Debug for project TLV ****
+14:13:45 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+14:13:46 **** Incremental Build of configuration Debug for project DAC ****
+make all 
+make: Nothing to be done for `all'.
+14:19:59 **** Incremental Build of configuration Debug for project TLV ****
+make all 
+make: Nothing to be done for `all'.
+14:19:59 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+14:19:59 **** Incremental Build of configuration Debug for project DAC ****
+make all 
+make: Nothing to be done for `all'.
+14:28:59 **** Incremental Build of configuration Debug for project TLV ****
+make all 
+make: Nothing to be done for `all'.
+14:28:59 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+14:28:59 **** Incremental Build of configuration Debug for project DAC ****
+make all 
+make: Nothing to be done for `all'.
+14:30:57 **** Incremental Build of configuration Debug for project TLV ****
+make all 
+make: Nothing to be done for `all'.
+14:30:58 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+14:30:58 **** Incremental Build of configuration Debug for project DAC ****
+make all 
+make: Nothing to be done for `all'.
+14:32:18 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+14:32:18 **** Incremental Build of configuration Debug for project TLV ****
+make all 
+Building file: ../src/tlv.c
+Invoking: MCU GCC Compiler
+%cd%
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib" -I"C:/Users/winstona/Documents/CE4020/TLV/inc" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/tlv.d" -MT"src/tlv.o" -o "src/tlv.o" "../src/tlv.c"
+../src/tlv.c: In function 'tlv_initResetPin':
+../src/tlv.c:63:2: warning: implicit declaration of function 'delay' [-Wimplicit-function-declaration]
+  delay(0.5);
+  ^
+Finished building: ../src/tlv.c
+ 
+Building target: libTLV.a
+Invoking: MCU GCC Archiver
+arm-none-eabi-ar -r  "libTLV.a" @"objects.list"  
+c:\Ac6\SystemWorkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829\tools\compiler\bin\arm-none-eabi-ar.exe: creating libTLV.a
+Finished building target: libTLV.a
+ 
+14:32:20 **** Incremental Build of configuration Debug for project DAC ****
+make all 
+Building target: DAC.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\winstona\Documents\CE4020\TLV\Debug" -L"C:\Users\winstona\Documents\CE4020\nucleo-f446re_stdperiph_lib\Debug" -T"C:\Users\winstona\Documents\CE4020\DAC\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "DAC.elf" @"objects.list"  -lTLV -lm -lnucleo-f446re_stdperiph_lib
+C:\Users\winstona\Documents\CE4020\TLV\Debug\libTLV.a(tlv.o): In function `tlv_initResetPin':
+C:\Users\winstona\Documents\CE4020\TLV\Debug/../src/tlv.c:63: undefined reference to `delay'
+collect2.exe: error: ld returned 1 exit status
+make: *** [DAC.elf] Error 1
+14:32:32 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+14:32:32 **** Incremental Build of configuration Debug for project TLV ****
+make all 
+Building file: ../src/tlv.c
+Invoking: MCU GCC Compiler
+%cd%
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib" -I"C:/Users/winstona/Documents/CE4020/TLV/inc" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/tlv.d" -MT"src/tlv.o" -o "src/tlv.o" "../src/tlv.c"
+../src/tlv.c:9:19: fatal error: delay.h: No such file or directory
+compilation terminated.
+make: *** [src/tlv.o] Error 1
+14:32:32 **** Incremental Build of configuration Debug for project DAC ****
+make all 
+Building target: DAC.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\winstona\Documents\CE4020\TLV\Debug" -L"C:\Users\winstona\Documents\CE4020\nucleo-f446re_stdperiph_lib\Debug" -T"C:\Users\winstona\Documents\CE4020\DAC\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "DAC.elf" @"objects.list"  -lTLV -lm -lnucleo-f446re_stdperiph_lib
+c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/bin/ld.exe: cannot find -lTLV
+collect2.exe: error: ld returned 1 exit status
+make: *** [DAC.elf] Error 1
+14:34:04 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+14:34:04 **** Incremental Build of configuration Debug for project TLV ****
 make all 
 Building file: ../src/tlv.c
 Invoking: MCU GCC Compiler
@@ -690,7 +355,7 @@ arm-none-eabi-ar -r  "libTLV.a" @"objects.list"
 c:\Ac6\SystemWorkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829\tools\compiler\bin\arm-none-eabi-ar.exe: creating libTLV.a
 Finished building target: libTLV.a
  
-13:35:37 **** Incremental Build of configuration Debug for project DAC ****
+14:34:05 **** Incremental Build of configuration Debug for project DAC ****
 make all 
 Building target: DAC.elf
 Invoking: MCU GCC Linker
@@ -702,23 +367,5 @@ Generating binary and Printing size information:
 arm-none-eabi-objcopy -O binary "DAC.elf" "DAC.bin"
 arm-none-eabi-size "DAC.elf"
    text	   data	    bss	    dec	    hex	filename
-  13420	   1092	   1056	  15568	   3cd0	DAC.elf
+  13436	   1092	   1056	  15584	   3ce0	DAC.elf
  
-13:35:40 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
-make all 
-make: Nothing to be done for `all'.
-13:35:41 **** Incremental Build of configuration Debug for project TLV ****
-make all 
-make: Nothing to be done for `all'.
-13:35:41 **** Incremental Build of configuration Debug for project DAC ****
-make all 
-make: Nothing to be done for `all'.
-13:37:54 **** Incremental Build of configuration Debug for project nucleo-f446re_stdperiph_lib ****
-make all 
-make: Nothing to be done for `all'.
-13:37:55 **** Incremental Build of configuration Debug for project TLV ****
-make all 
-make: Nothing to be done for `all'.
-13:37:55 **** Incremental Build of configuration Debug for project DAC ****
-make all 
-make: Nothing to be done for `all'.

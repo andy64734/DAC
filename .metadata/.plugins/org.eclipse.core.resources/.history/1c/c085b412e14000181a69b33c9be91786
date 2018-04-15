@@ -60,7 +60,6 @@ void tlv_initResetPin()
 
 	// Initiate the DAC reset.s
 	GPIO_ResetBits(TLV_RESET_PORT, 1 << TLV_RESET_PIN);
-	// TODO Add some delay logic to ensure enough time for reset to work.
 	GPIO_SetBits(TLV_RESET_PORT, 1 << TLV_RESET_PIN);
 }
 
@@ -70,8 +69,6 @@ void tlv_i2c_write(uint8_t address, uint8_t message)
 	// but just in case.
 	while (I2C_GetFlagStatus(SD_I2C_INTERFACE, I2C_FLAG_BUSY));
 	I2C_GenerateSTART(SD_I2C_INTERFACE, ENABLE);
-	while (!I2C_CheckEvent(SD_I2C_INTERFACE,
-			I2C_EVENT_MASTER_MODE_SELECT));
 	I2C_Send7bitAddress(SD_I2C_INTERFACE, TLV_I2C_ADDR, I2C_Direction_Transmitter);
 	while (!I2C_CheckEvent(SD_I2C_INTERFACE,
 				I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED));
