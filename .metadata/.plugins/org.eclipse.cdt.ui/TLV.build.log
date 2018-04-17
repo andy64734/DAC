@@ -1,17 +1,6 @@
-14:34:04 **** Incremental Build of configuration Debug for project TLV ****
+21:34:55 **** Incremental Build of configuration Debug for project TLV ****
 make all 
-Building file: ../src/tlv.c
-Invoking: MCU GCC Compiler
-%cd%
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib" -I"C:/Users/winstona/Documents/CE4020/TLV/inc" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/winstona/Documents/CE4020/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/tlv.d" -MT"src/tlv.o" -o "src/tlv.o" "../src/tlv.c"
-Finished building: ../src/tlv.c
- 
-Building target: libTLV.a
-Invoking: MCU GCC Archiver
-arm-none-eabi-ar -r  "libTLV.a" @"objects.list"  
-c:\Ac6\SystemWorkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829\tools\compiler\bin\arm-none-eabi-ar.exe: creating libTLV.a
-Finished building target: libTLV.a
- 
+make: Nothing to be done for `all'.
 
-14:34:05 Build Finished (took 948ms)
+21:34:55 Build Finished (took 151ms)
 

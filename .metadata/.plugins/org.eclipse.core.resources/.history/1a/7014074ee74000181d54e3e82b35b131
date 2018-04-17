@@ -6,7 +6,6 @@
  */
 #include <ringbuffer.h>
 #include <tlv.h>
-#include "delay.h"
 
 void tlv_initI2sPins()
 {
@@ -62,7 +61,7 @@ void tlv_initResetPin()
 	// Initiate the DAC reset.s
 	GPIO_ResetBits(TLV_RESET_PORT, 1 << TLV_RESET_PIN);
 	// TODO Add some delay logic to ensure enough time for reset to work.
-	delay_ms(2000);
+	delay_ms(500);
 	GPIO_SetBits(TLV_RESET_PORT, 1 << TLV_RESET_PIN);
 }
 

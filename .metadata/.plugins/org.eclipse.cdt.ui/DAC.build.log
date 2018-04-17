@@ -1,17 +1,6 @@
-14:34:05 **** Incremental Build of configuration Debug for project DAC ****
+21:34:56 **** Incremental Build of configuration Debug for project DAC ****
 make all 
-Building target: DAC.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\winstona\Documents\CE4020\TLV\Debug" -L"C:\Users\winstona\Documents\CE4020\nucleo-f446re_stdperiph_lib\Debug" -T"C:\Users\winstona\Documents\CE4020\DAC\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "DAC.elf" @"objects.list"  -lTLV -lm -lnucleo-f446re_stdperiph_lib
-Finished building target: DAC.elf
- 
-make --no-print-directory post-build
-Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "DAC.elf" "DAC.bin"
-arm-none-eabi-size "DAC.elf"
-   text	   data	    bss	    dec	    hex	filename
-  13436	   1092	   1056	  15584	   3ce0	DAC.elf
- 
+make: Nothing to be done for `all'.
 
-14:34:06 Build Finished (took 797ms)
+21:34:56 Build Finished (took 141ms)
 
