@@ -16,8 +16,8 @@
  * GPIO Pin Settings
  *****************************************************************************/
 
-#define TLV_RESET_PORT			(GPIOA)
-#define TLV_RESET_PIN			(4)
+#define TLV_RESET_PORT			(GPIOB)
+#define TLV_RESET_PIN			(10)
 
 #define SD_I2S_ALT_FUNC 		(GPIO_AF_SPI1)
 #define SD_I2C_ALT_FUNC 		(GPIO_AF_I2C1)
