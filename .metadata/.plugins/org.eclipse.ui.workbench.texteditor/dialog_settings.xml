@@ -2,22 +2,23 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="HSE_VALUE" key="selection"/>
+		<item value="SPI1" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="system"/>
-			<item value="hse_value"/>
-			<item value="Speed"/>
-			<item value="speed"/>
-			<item value="clock"/>
-			<item value="#if defined"/>
-			<item value="STM32F446"/>
-			<item value="stm32f446"/>
+			<item value="SPI1"/>
+			<item value="SPI2"/>
+			<item value="i2s2"/>
+			<item value="structinit"/>
+			<item value="spi_structinit"/>
+			<item value="i2s"/>
+			<item value="i2s_init"/>
+			<item value="pupd"/>
 		</list>
 		<list key="replacehistory">
+			<item value="SD_I2S_INTERFACE"/>
 			<item value="tlv_i2c_write"/>
 		</list>
 	</section>
@@ -25,7 +26,7 @@
 		<item value="257" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="381" key="DIALOG_HEIGHT"/>
-		<item value="1112" key="DIALOG_X_ORIGIN"/>
-		<item value="224" key="DIALOG_Y_ORIGIN"/>
+		<item value="716" key="DIALOG_X_ORIGIN"/>
+		<item value="184" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

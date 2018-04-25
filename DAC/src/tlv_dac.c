@@ -33,6 +33,8 @@ void tlv_dac_init()
 	I2C_InitTypeDef i2cSettings;
 	I2C_StructInit(&i2cSettings);
 
+	SPI_InitTypeDef i2sSettings;
+
 	// Initialize the I2C radio with the appropriate settings.
 	// The default settings in i2cSettings should be fine.
 	I2C_Init(SD_I2C_INTERFACE, &i2cSettings);
@@ -47,7 +49,7 @@ static void _tlv_dac_I2S_audioSettings()
 {
 	I2S_InitTypeDef I2S_InitStructure;
 
-	SPI_I2S_DeInit(SPI2);
+	SPI_I2S_DeInit(SD_I2S_INTERFACE);
 	// Audio is recorded from two channels
 	I2S_InitStructure.I2S_AudioFreq = 44100;
 	I2S_InitStructure.I2S_Standard = I2S_Standard_Phillips;
@@ -55,8 +57,8 @@ static void _tlv_dac_I2S_audioSettings()
 	I2S_InitStructure.I2S_CPOL = I2S_CPOL_High;
 	I2S_InitStructure.I2S_Mode = I2S_Mode_MasterTx;
 	I2S_InitStructure.I2S_MCLKOutput = I2S_MCLKOutput_Enable;
-	I2S_Init(SPI1, &I2S_InitStructure);
-	I2S_Cmd(SPI1, ENABLE);
+	I2S_Init(SD_I2S_INTERFACE, &I2S_InitStructure);
+	I2S_Cmd(SD_I2S_INTERFACE, ENABLE);
 
 }
 static void _tlv_dac_initRegisters()

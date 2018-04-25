@@ -24,13 +24,17 @@ void tlv_initI2sPins()
 
 void SD_I2S_write(RingBuffer* I2S_buffer)
 {
-	while(!SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_TXE));
-	SPI_I2S_SendData(SPI2, get(I2S_buffer));
+	while(!SPI_I2S_GetFlagStatus(SD_I2S_INTERFACE, SPI_I2S_FLAG_TXE));
+	int32_t bufferValue = get(I2S_buffer);
+	// TODO Flip the order if needed.
+	SPI_I2S_SendData(SD_I2S_INTERFACE, (uint16_t) bufferValue);
+	SPI_I2S_SendData(SD_I2S_INTERFACE, (uint16_t) (bufferValue >> 16));
+
 }
 
 void SD_I2S_read(SPI_TypeDef* SPIx, RingBuffer* I2S_buffer)
 {
-	while(!SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_RXNE));
+	while(!SPI_I2S_GetFlagStatus(SD_I2S_INTERFACE, SPI_I2S_FLAG_RXNE));
 	put(I2S_buffer, SPI_I2S_ReceiveData(SPIx));
 }
 
@@ -46,6 +50,8 @@ void tlv_initI2cPins()
 	// I2C standard requires pull-up resistors to avoid bus contention.
 	// However, external, strong 2.2 k-ohm resistors will help us out.
 	i2cPortSettings.GPIO_PuPd = GPIO_PuPd_NOPULL;
+	// For open drain. Don't force high when 1.
+	i2cPortSettings.GPIO_OType = GPIO_OType_OD;
 	GPIO_Init(SD_I2C_PORT, &i2cPortSettings);
 
 
@@ -61,9 +67,9 @@ void tlv_initResetPin()
 
 	// Initiate the DAC reset.s
 	GPIO_ResetBits(TLV_RESET_PORT, 1 << TLV_RESET_PIN);
-	// TODO Add some delay logic to ensure enough time for reset to work.
-	delay_ms(2000);
+	delay_ms(500);
 	GPIO_SetBits(TLV_RESET_PORT, 1 << TLV_RESET_PIN);
+	delay_ms(11); // Delay for 11 ms for nRF chip.
 }
 
 void tlv_i2c_write(uint8_t address, uint8_t message)

@@ -17,16 +17,16 @@
 typedef struct{
 	uint8_t tail;
 	uint8_t head;
-	uint16_t buffer[BUF_SIZE];
+	int32_t buffer[BUF_SIZE];
 } RingBuffer;
 
 void ringBufferInit(RingBuffer*);
 
 // put an element in a buffer
-bool put(RingBuffer*, int16_t);
+bool put(RingBuffer*, int32_t);
 
 // remove an element from the buffer
-int16_t get(RingBuffer*);
+int32_t get(RingBuffer*);
 
 // to check if the buffer is full
 int hasSpace(RingBuffer*);
