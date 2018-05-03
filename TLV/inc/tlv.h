@@ -29,7 +29,7 @@
 
 #define SD_I2S_WS				(4)
 #define SD_I2S_CK				(5)
-#define SD_I2S_SD				(6)
+#define SD_I2S_SD				(7)
 
 #define SD_I2S_WS_PIN			(GPIO_Pin_4)
 #define SD_I2S_CK_PIN			(GPIO_Pin_5)

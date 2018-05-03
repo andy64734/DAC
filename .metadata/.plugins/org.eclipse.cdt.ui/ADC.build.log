@@ -1,8 +1,8 @@
-15:16:19 **** Incremental Build of configuration Debug for project ADC ****
+20:41:00 **** Incremental Build of configuration Debug for project ADC ****
 make all 
 Building target: ADC.elf
 Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\winstona\Documents\CE4020\TLV\Debug" -L"C:\Users\winstona\Documents\CE4020\nucleo-f446re_stdperiph_lib\Debug" -T"C:\Users\winstona\Documents\CE4020\ADC\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "ADC.elf" @"objects.list"  -lTLV -lnucleo-f446re_stdperiph_lib
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\winstona\Documents\CE4020\TLV\Debug" -L"C:\Users\winstona\Documents\CE4020\nucleo-f446re_stdperiph_lib\Debug" -T"C:\Users\winstona\Documents\CE4020\ADC\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "ADC.elf" @"objects.list"  -lTLV -lnucleo-f446re_stdperiph_lib -lm
 Finished building target: ADC.elf
  
 make --no-print-directory post-build
@@ -10,8 +10,8 @@ Generating binary and Printing size information:
 arm-none-eabi-objcopy -O binary "ADC.elf" "ADC.bin"
 arm-none-eabi-size "ADC.elf"
    text	   data	    bss	    dec	    hex	filename
-   4432	   1092	   1056	   6580	   19b4	ADC.elf
+   4404	   1096	   1092	   6592	   19c0	ADC.elf
  
 
-15:16:20 Build Finished (took 695ms)
+20:41:00 Build Finished (took 494ms)
 

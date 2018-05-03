@@ -1,6 +1,6 @@
-15:25:01 **** Incremental Build of configuration Debug for project TLV ****
+20:43:10 **** Incremental Build of configuration Debug for project TLV ****
 make all 
-make: Nothing to be done for `all'.
+make: Nothing to be done for 'all'.
 
-15:25:01 Build Finished (took 143ms)
+20:43:10 Build Finished (took 137ms)
 
