@@ -8,9 +8,9 @@
 #ifndef TLV_DAC_H_
 #define TLV_DAC_H_
 
-#include <tlv.h>
+//#include <tlv.h>
 #ifndef TLV_H_
-#error "The tlv.h file is required for DAC functionality."
+//#error "The tlv.h file is required for DAC functionality."
 #endif //TLV_H_
 #include <inttypes.h>
 

@@ -87,6 +87,7 @@ void tlv_i2c_write(uint8_t address, uint8_t message)
 	// is disabled after the start bit has been successfully sent.
 }
 
+
 uint8_t tlv_i2c_read(uint8_t address)
 {
 	while (I2C_GetFlagStatus(SD_I2C_INTERFACE, I2C_FLAG_BUSY));

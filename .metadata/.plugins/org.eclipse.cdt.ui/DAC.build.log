@@ -1,23 +1,58 @@
-12:28:48 **** Build of configuration Debug for project DAC ****
+21:15:52 **** Build of configuration Debug for project DAC ****
 make all 
-'Building file: ../startup/startup_stm32.s'
-'Invoking: MCU GCC Assembler'
-C:\Users\sharana\Documents\Senior_Design\DAC\DAC\Debug
-arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -I"C:/Users/sharana/Documents/Senior_Design/DAC/nucleo-f446re_stdperiph_lib" -I"C:/Users/sharana/Documents/Senior_Design/DAC/DAC/inc" -I"C:/Users/sharana/Documents/Senior_Design/DAC/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/sharana/Documents/Senior_Design/DAC/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/sharana/Documents/Senior_Design/DAC/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/sharana/Documents/Senior_Design/DAC/TLV/inc" -g -o "startup/startup_stm32.o" "../startup/startup_stm32.s"
-'Finished building: ../startup/startup_stm32.s'
-' '
-'Building file: ../src/main.c'
-'Invoking: MCU GCC Compiler'
-C:\Users\sharana\Documents\Senior_Design\DAC\DAC\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/sharana/Documents/Senior_Design/DAC/TLV/inc" -I"C:/Users/sharana/Documents/Senior_Design/DAC/nucleo-f446re_stdperiph_lib" -I"C:/Users/sharana/Documents/Senior_Design/DAC/DAC/inc" -I"C:/Users/sharana/Documents/Senior_Design/DAC/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/sharana/Documents/Senior_Design/DAC/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/sharana/Documents/Senior_Design/DAC/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-In file included from ../src/main.c:12:0:
-C:/Users/sharana/Documents/Senior_Design/DAC/TLV/inc/tlv.h:102:16: error: unknown type name 'RingBuffer'
- void I2S_write(RingBuffer* I2S_buffer);
-                ^
-C:/Users/sharana/Documents/Senior_Design/DAC/TLV/inc/tlv.h:107:15: error: unknown type name 'SPI_TypeDef'
- void I2S_read(SPI_TypeDef* SPIx);
-               ^
-make: *** [src/main.o] Error 1
+Building file: ../startup/startup_stm32.s
+Invoking: MCU GCC Assembler
+C:\Users\banikp\Documents\DAC\DAC\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -I"C:/Users/banikp/Documents/DAC/nucleo-f446re_stdperiph_lib" -I"C:/Users/banikp/Documents/DAC/DAC/inc" -I"C:/Users/banikp/Documents/DAC/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/banikp/Documents/DAC/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/banikp/Documents/DAC/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/banikp/Documents/DAC/TLV/inc" -g -o "startup/startup_stm32.o" "../startup/startup_stm32.s"
+Finished building: ../startup/startup_stm32.s
+ 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\Users\banikp\Documents\DAC\DAC\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/banikp/Documents/DAC/TLV/inc" -I"C:/Users/banikp/Documents/DAC/nucleo-f446re_stdperiph_lib" -I"C:/Users/banikp/Documents/DAC/DAC/inc" -I"C:/Users/banikp/Documents/DAC/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/banikp/Documents/DAC/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/banikp/Documents/DAC/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:17:2: warning: implicit declaration of function 'tlv_dac_init' [-Wimplicit-function-declaration]
+  tlv_dac_init();
+  ^~~~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building file: ../src/syscalls.c
+Invoking: MCU GCC Compiler
+C:\Users\banikp\Documents\DAC\DAC\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/banikp/Documents/DAC/TLV/inc" -I"C:/Users/banikp/Documents/DAC/nucleo-f446re_stdperiph_lib" -I"C:/Users/banikp/Documents/DAC/DAC/inc" -I"C:/Users/banikp/Documents/DAC/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/banikp/Documents/DAC/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/banikp/Documents/DAC/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/syscalls.d" -MT"src/syscalls.o" -o "src/syscalls.o" "../src/syscalls.c"
+Finished building: ../src/syscalls.c
+ 
+Building file: ../src/system_stm32f4xx.c
+Invoking: MCU GCC Compiler
+C:\Users\banikp\Documents\DAC\DAC\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/banikp/Documents/DAC/TLV/inc" -I"C:/Users/banikp/Documents/DAC/nucleo-f446re_stdperiph_lib" -I"C:/Users/banikp/Documents/DAC/DAC/inc" -I"C:/Users/banikp/Documents/DAC/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/banikp/Documents/DAC/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/banikp/Documents/DAC/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/system_stm32f4xx.d" -MT"src/system_stm32f4xx.o" -o "src/system_stm32f4xx.o" "../src/system_stm32f4xx.c"
+../src/system_stm32f4xx.c: In function 'SetSysClock':
+../src/system_stm32f4xx.c:752:5: warning: this 'while' clause does not guard... [-Wmisleading-indentation]
+     while ((RCC->CFGR & (uint32_t)RCC_CFGR_SWS ) != RCC_CFGR_SWS_PLL);
+     ^~~~~
+../src/system_stm32f4xx.c:753:5: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the 'while'
+     {
+     ^
+Finished building: ../src/system_stm32f4xx.c
+ 
+Building file: ../src/tlv_dac.c
+Invoking: MCU GCC Compiler
+C:\Users\banikp\Documents\DAC\DAC\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/banikp/Documents/DAC/TLV/inc" -I"C:/Users/banikp/Documents/DAC/nucleo-f446re_stdperiph_lib" -I"C:/Users/banikp/Documents/DAC/DAC/inc" -I"C:/Users/banikp/Documents/DAC/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/banikp/Documents/DAC/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/banikp/Documents/DAC/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/tlv_dac.d" -MT"src/tlv_dac.o" -o "src/tlv_dac.o" "../src/tlv_dac.c"
+Finished building: ../src/tlv_dac.c
+ 
+Building target: DAC.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\banikp\Documents\DAC\TLV\Debug" -L"C:\Users\banikp\Documents\DAC\nucleo-f446re_stdperiph_lib\Debug" -T"C:\Users\banikp\Documents\DAC\DAC\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "DAC.elf" @"objects.list"  -lTLV -lnucleo-f446re_stdperiph_lib -lm
+Finished building target: DAC.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "DAC.elf" "DAC.bin"
+arm-none-eabi-size "DAC.elf"
+   text	   data	    bss	    dec	    hex	filename
+   4972	   1096	   1092	   7160	   1bf8	DAC.elf
+ 
 
-12:28:49 Build Finished (took 1s.208ms)
+21:15:58 Build Finished (took 6s.9ms)
 

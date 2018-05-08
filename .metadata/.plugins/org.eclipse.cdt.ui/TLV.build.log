@@ -1,17 +1,39 @@
-13:13:34 **** Incremental Build of configuration Debug for project TLV ****
+21:15:49 **** Build of configuration Debug for project TLV ****
 make all 
-'Building file: ../src/tlv.c'
-'Invoking: MCU GCC Compiler'
-C:\Users\sharana\Documents\Senior_Design\DAC\TLV\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/sharana/Documents/Senior_Design/DAC/nucleo-f446re_stdperiph_lib" -I"C:/Users/sharana/Documents/Senior_Design/DAC/TLV/inc" -I"C:/Users/sharana/Documents/Senior_Design/DAC/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/sharana/Documents/Senior_Design/DAC/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/sharana/Documents/Senior_Design/DAC/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/tlv.d" -MT"src/tlv.o" -o "src/tlv.o" "../src/tlv.c"
-'Finished building: ../src/tlv.c'
-' '
-'Building target: libTLV.a'
-'Invoking: MCU GCC Archiver'
+Building file: ../src/ringbuffer.c
+Invoking: MCU GCC Compiler
+C:\Users\banikp\Documents\DAC\TLV\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/banikp/Documents/DAC/nucleo-f446re_stdperiph_lib" -I"C:/Users/banikp/Documents/DAC/TLV/inc" -I"C:/Users/banikp/Documents/DAC/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/banikp/Documents/DAC/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/banikp/Documents/DAC/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/ringbuffer.d" -MT"src/ringbuffer.o" -o "src/ringbuffer.o" "../src/ringbuffer.c"
+../src/ringbuffer.c: In function 'put':
+../src/ringbuffer.c:19:15: warning: passing argument 1 of 'hasSpace' from incompatible pointer type [-Wincompatible-pointer-types]
+  if (hasSpace(&buffer) != 0)
+               ^
+In file included from ../src/ringbuffer.c:8:0:
+C:/Users/banikp/Documents/DAC/TLV/inc/ringbuffer.h:31:5: note: expected 'RingBuffer * {aka struct <anonymous> *}' but argument is of type 'RingBuffer ** {aka struct <anonymous> **}'
+ int hasSpace(RingBuffer*);
+     ^~~~~~~~
+../src/ringbuffer.c: In function 'get':
+../src/ringbuffer.c:38:17: warning: passing argument 1 of 'hasElement' from incompatible pointer type [-Wincompatible-pointer-types]
+  if (hasElement(&buffer) != 0)
+                 ^
+In file included from ../src/ringbuffer.c:8:0:
+C:/Users/banikp/Documents/DAC/TLV/inc/ringbuffer.h:34:5: note: expected 'RingBuffer * {aka struct <anonymous> *}' but argument is of type 'RingBuffer ** {aka struct <anonymous> **}'
+ int hasElement(RingBuffer*);
+     ^~~~~~~~~~
+Finished building: ../src/ringbuffer.c
+ 
+Building file: ../src/tlv.c
+Invoking: MCU GCC Compiler
+C:\Users\banikp\Documents\DAC\TLV\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/banikp/Documents/DAC/nucleo-f446re_stdperiph_lib" -I"C:/Users/banikp/Documents/DAC/TLV/inc" -I"C:/Users/banikp/Documents/DAC/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/banikp/Documents/DAC/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/banikp/Documents/DAC/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/tlv.d" -MT"src/tlv.o" -o "src/tlv.o" "../src/tlv.c"
+Finished building: ../src/tlv.c
+ 
+Building target: libTLV.a
+Invoking: MCU GCC Archiver
 arm-none-eabi-ar -r  "libTLV.a" @"objects.list"  
 arm-none-eabi-ar: creating libTLV.a
-'Finished building target: libTLV.a'
-' '
+Finished building target: libTLV.a
+ 
 
-13:13:35 Build Finished (took 1s.418ms)
+21:15:52 Build Finished (took 2s.540ms)
 
