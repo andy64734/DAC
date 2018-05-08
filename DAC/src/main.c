@@ -32,7 +32,7 @@ int main(void)
 			// Create the new value in the buffer.
 			double waveValue = sin(2 * M_PI * WAVE_FREQ * currTime / SAMP_RATE);
 			int16_t regValue = waveValue * pow(2,15);
-			int32_t finalValue = (regValue << 16) | (regValue);
+			uint32_t finalValue = (regValue << 16) | (regValue);
 			put(&theBuffer, regValue);
 			currTime++;
 		}

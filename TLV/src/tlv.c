@@ -101,13 +101,22 @@ uint8_t tlv_i2c_read(uint8_t address)
 {
 	while (I2C_GetFlagStatus(SD_I2C_INTERFACE, I2C_FLAG_BUSY));
 	I2C_GenerateSTART(SD_I2C_INTERFACE, ENABLE);
-	I2C_Send7bitAddress(SD_I2C_INTERFACE, TLV_I2C_ADDR, I2C_Direction_Receiver);
 	while (!I2C_CheckEvent(SD_I2C_INTERFACE,
-				I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED));
+				I2C_EVENT_MASTER_MODE_SELECT));
+	I2C_Send7bitAddress(SD_I2C_INTERFACE, TLV_I2C_ADDR, I2C_Direction_Transmitter);
+
+	while (!I2C_CheckEvent(SD_I2C_INTERFACE,
+				I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED));
 	// Send an address, and wait to receive a byte back.
 	I2C_SendData(SD_I2C_INTERFACE, address);
 	while (!I2C_CheckEvent(SD_I2C_INTERFACE,
 			I2C_EVENT_MASTER_BYTE_TRANSMITTED));
+	I2C_GenerateSTART(SD_I2C_INTERFACE, ENABLE);
+	while (!I2C_CheckEvent(SD_I2C_INTERFACE,
+				I2C_EVENT_MASTER_MODE_SELECT));
+	I2C_Send7bitAddress(SD_I2C_INTERFACE, TLV_I2C_ADDR, I2C_Direction_Receiver);
+	while (!I2C_CheckEvent(SD_I2C_INTERFACE,
+				I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED));
 	// STOP generated after receiving next byte.
 	I2C_GenerateSTOP(SD_I2C_INTERFACE, ENABLE);
 	while (!I2C_CheckEvent(SD_I2C_INTERFACE, I2C_EVENT_MASTER_BYTE_RECEIVED));

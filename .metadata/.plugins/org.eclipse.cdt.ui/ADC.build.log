@@ -1,4 +1,4 @@
-20:41:00 **** Incremental Build of configuration Debug for project ADC ****
+14:49:48 **** Incremental Build of configuration Debug for project ADC ****
 make all 
 Building target: ADC.elf
 Invoking: MCU GCC Linker
@@ -13,5 +13,5 @@ arm-none-eabi-size "ADC.elf"
    4404	   1096	   1092	   6592	   19c0	ADC.elf
  
 
-20:41:00 Build Finished (took 494ms)
+14:49:48 Build Finished (took 592ms)
 

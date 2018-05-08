@@ -33,7 +33,7 @@
 
 #define SD_I2S_WS_PIN			(GPIO_Pin_4)
 #define SD_I2S_CK_PIN			(GPIO_Pin_5)
-#define SD_I2S_SD_PIN			(GPIO_Pin_6)
+#define SD_I2S_SD_PIN			(GPIO_Pin_7)
 
 #define SD_I2C_PORT				(GPIOB)
 
@@ -77,6 +77,8 @@
 #define TLV_HPLOUT_OUT_LEVEL	(51)
 // HPROUT Output Level Control Register
 #define TLV_HPROUT_OUT_LEVEL	(65)
+// Module Power Status Register
+#define TLV_PWR_STATUS			(94)
 
 #define TLV_REG_MASK			(0x7F)
 

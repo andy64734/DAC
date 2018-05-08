@@ -43,7 +43,7 @@ int32_t get(RingBuffer* buffer)
 	//check space
 	if (hasElement(buffer) != 0)
 	{	//get character from the  buffer
-		uint16_t element = buffer->buffer[buffer->tail];
+		int32_t element = buffer->buffer[buffer->tail];
 		//adjusting get
 		buffer->tail = (buffer->tail+1) % BUF_SIZE;
 		return element;
