@@ -43,7 +43,7 @@ uint8_t dataOut[32], dataIn[32];
 
 /* Interrupt pin settings */
 #define IRQ_PORT    GPIOA
-#define IRQ_PIN     GPIO_PIN_10
+#define IRQ_PIN     GPIO_PIN_15
 
 /* Interrupt status */
 TM_NRF24L01_Transmit_Status_t transmissionStatus;
