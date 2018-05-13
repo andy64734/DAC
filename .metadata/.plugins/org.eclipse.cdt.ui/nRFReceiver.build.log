@@ -1,0 +1,23 @@
+15:31:50 **** Incremental Build of configuration Debug for project nRFReceiver ****
+make all 
+Building file: ../src/tm_stm32f4_usart.c
+Invoking: MCU GCC Compiler
+C:\Users\banikp\Documents\DAC\nRFReceiver\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DDEBUG -DSTM32F446xx -DUSE_STDPERIPH_DRIVER -DKEIL_IDE -I"C:/Users/banikp/Documents/DAC/nucleo-f446re_stdperiph_lib" -I"C:/Users/banikp/Documents/DAC/nRFReceiver/StdPeriph_Driver/inc" -I"C:/Users/banikp/Documents/DAC/nRFReceiver/inc" -I"C:/Users/banikp/Documents/DAC/nRFReceiver/CMSIS/device" -I"C:/Users/banikp/Documents/DAC/nRFReceiver/CMSIS/core" -I"C:/Users/banikp/Documents/DAC/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/banikp/Documents/DAC/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/banikp/Documents/DAC/nucleo-f446re_stdperiph_lib/CMSIS/device" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/tm_stm32f4_usart.d" -MT"src/tm_stm32f4_usart.o" -o "src/tm_stm32f4_usart.o" "../src/tm_stm32f4_usart.c"
+Finished building: ../src/tm_stm32f4_usart.c
+ 
+Building target: nRFReceiver.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\banikp\Documents\DAC\nucleo-f446re_stdperiph_lib\Debug" -T"C:\Users\banikp\Documents\DAC\nRFReceiver\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "nRFReceiver.elf" @"objects.list"  -lnucleo-f446re_stdperiph_lib -lm
+Finished building target: nRFReceiver.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "nRFReceiver.elf" "nRFReceiver.bin"
+arm-none-eabi-size "nRFReceiver.elf"
+   text	   data	    bss	    dec	    hex	filename
+  11832	   2272	   1484	  15588	   3ce4	nRFReceiver.elf
+ 
+
+15:31:52 Build Finished (took 2s.678ms)
+
