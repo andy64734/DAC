@@ -3,6 +3,7 @@
 	<name>nRFmodule</name>
 	<comment></comment>
 	<projects>
+		<project>nucleo-f446re_stdperiph_lib</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
