@@ -16,20 +16,34 @@ void tlv_initI2sPins()
 	i2sPortSettings.GPIO_Mode = GPIO_Mode_AF;
 	i2sPortSettings.GPIO_Pin = SD_I2S_WS_PIN | SD_I2S_CK_PIN | SD_I2S_SD_PIN;
 	GPIO_Init(SD_I2S_PORT, &i2sPortSettings);
+	// Separate configuration needed for the MCLK pin. Yes, it's needed.
+	GPIO_InitTypeDef i2sMclkPortSettings;
+	GPIO_StructInit(&i2sMclkPortSettings);
+	i2sMclkPortSettings.GPIO_Mode = GPIO_Mode_AF;
+	i2sMclkPortSettings.GPIO_Pin = SD_I2S_MCLK_PIN;
+	GPIO_Init(SD_I2S_MCLK_PORT, &i2sMclkPortSettings);
 	// Now set up the alternate function for each the pins.
 	GPIO_PinAFConfig(SD_I2S_PORT, SD_I2S_WS, SD_I2S_ALT_FUNC);
 	GPIO_PinAFConfig(SD_I2S_PORT, SD_I2S_CK, SD_I2S_ALT_FUNC);
 	GPIO_PinAFConfig(SD_I2S_PORT, SD_I2S_SD, SD_I2S_ALT_FUNC);
+	GPIO_PinAFConfig(SD_I2S_MCLK_PORT, SD_I2S_MCLK, SD_I2S_ALT_FUNC);
 }
 
-void SD_I2S_write(RingBuffer* I2S_buffer)
+bool SD_I2S_write(RingBuffer* I2S_buffer)
 {
-	while(!SPI_I2S_GetFlagStatus(SD_I2S_INTERFACE, SPI_I2S_FLAG_TXE));
+	if (!SPI_I2S_GetFlagStatus(SD_I2S_INTERFACE, SPI_I2S_FLAG_TXE))
+	{
+		return false;
+	}
+	if (!hasElement(I2S_buffer))
+	{
+		return false;
+	}
 	int32_t bufferValue = get(I2S_buffer);
 	// TODO Flip the order if needed.
 	SPI_I2S_SendData(SD_I2S_INTERFACE, (uint16_t) bufferValue);
 	SPI_I2S_SendData(SD_I2S_INTERFACE, (uint16_t) (bufferValue >> 16));
-
+	return true;
 }
 
 void SD_I2S_read(SPI_TypeDef* SPIx, RingBuffer* I2S_buffer)

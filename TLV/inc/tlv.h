@@ -26,14 +26,17 @@
 #define SD_I2S_INTERFACE 		(SPI1)
 
 #define SD_I2S_PORT				(GPIOA)
+#define SD_I2S_MCLK_PORT		(GPIOC)
 
 #define SD_I2S_WS				(4)
 #define SD_I2S_CK				(5)
 #define SD_I2S_SD				(7)
+#define SD_I2S_MCLK				(4)
 
 #define SD_I2S_WS_PIN			(GPIO_Pin_4)
 #define SD_I2S_CK_PIN			(GPIO_Pin_5)
 #define SD_I2S_SD_PIN			(GPIO_Pin_7)
+#define SD_I2S_MCLK_PIN			(GPIO_Pin_4)
 
 #define SD_I2C_PORT				(GPIOB)
 
@@ -75,10 +78,16 @@
 #define TLV_RIGHT_DAC_VOL		(44)
 // HPLOUT Output Level Control Register
 #define TLV_HPLOUT_OUT_LEVEL	(51)
+// HPLCOM Output Level Control Register
+#define TLV_HPLCOM_OUT_LEVEL	(58)
 // HPROUT Output Level Control Register
 #define TLV_HPROUT_OUT_LEVEL	(65)
+// HPRCOM Output Level Control Register
+#define TLV_HPRCOM_OUT_LEVEL	(72)
 // Module Power Status Register
 #define TLV_PWR_STATUS			(94)
+// Clock Register
+#define TLV_CLOCK				(101)
 
 #define TLV_REG_MASK			(0x7F)
 
@@ -128,8 +137,9 @@ void tlv_initResetPin();
 
 /**
  * Here we have a method to write data to an I2S port from a ring buffer.
+ * This is non-blocking, and returns a bool of whether we're successful or not.
  */
-void SD_I2S_write(RingBuffer* I2S_buffer);
+bool SD_I2S_write(RingBuffer* I2S_buffer);
 
 /**
  * Here we have a method to read data into a ring buffer from a I2S port.

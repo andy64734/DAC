@@ -1,17 +1,7 @@
-14:49:48 **** Incremental Build of configuration Debug for project ADC ****
-make all 
-Building target: ADC.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\winstona\Documents\CE4020\TLV\Debug" -L"C:\Users\winstona\Documents\CE4020\nucleo-f446re_stdperiph_lib\Debug" -T"C:\Users\winstona\Documents\CE4020\ADC\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "ADC.elf" @"objects.list"  -lTLV -lnucleo-f446re_stdperiph_lib -lm
-Finished building target: ADC.elf
- 
-make --no-print-directory post-build
-Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "ADC.elf" "ADC.bin"
-arm-none-eabi-size "ADC.elf"
-   text	   data	    bss	    dec	    hex	filename
-   4404	   1096	   1092	   6592	   19c0	ADC.elf
+11:35:34 **** Clean-only build of configuration Debug for project ADC ****
+make clean 
+rm -rf *
  
 
-14:49:48 Build Finished (took 592ms)
+11:35:34 Build Finished (took 265ms)
 
