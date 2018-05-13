@@ -11,6 +11,10 @@
 #include <stdbool.h>
 
 // Size of the buffer
+// The size must be strictly greater than 1, since the ring buffer
+// would be detected as full if the head is directly after the tail. If
+// they are at the same point, then this is detected as empty. This
+// size prevents confusion.
 #define BUF_SIZE 2
 
 // buffer structure

@@ -17,7 +17,8 @@ void ringBufferInit(RingBuffer* buffer)
 /*
  * Here we have a method put characters into the buffer.
  * @param buffer it is a structure type to access the correct ring buffer.
- * @param element it is the character.
+ * @param element The data to be sent. 'Tis 32 bits to allow for both
+ * channels of 16 bit smaples.
  */
 bool put(RingBuffer* buffer, int32_t element)
 {
@@ -37,6 +38,8 @@ bool put(RingBuffer* buffer, int32_t element)
 /*
  * Here we have a method to get and remove characters into the buffer.
  * @param buffer it is a structure type to access the correct ring buffer.
+ * RETURNS: The 2 16-bit samples of the channel. Since data is unsigned,
+ * this is unsigned.
  */
 int32_t get(RingBuffer* buffer)
 {

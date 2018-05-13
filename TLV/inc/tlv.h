@@ -143,6 +143,7 @@ bool SD_I2S_write(RingBuffer* I2S_buffer);
 
 /**
  * Here we have a method to read data into a ring buffer from a I2S port.
+ * As of now, this is blocking.
  */
 void SD_I2S_read(SPI_TypeDef* SPIx, RingBuffer* I2S_buffer);
 
