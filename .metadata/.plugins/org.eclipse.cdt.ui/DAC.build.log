@@ -1,23 +1,7 @@
-12:28:48 **** Build of configuration Debug for project DAC ****
-make all 
-'Building file: ../startup/startup_stm32.s'
-'Invoking: MCU GCC Assembler'
-C:\Users\sharana\Documents\Senior_Design\DAC\DAC\Debug
-arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -I"C:/Users/sharana/Documents/Senior_Design/DAC/nucleo-f446re_stdperiph_lib" -I"C:/Users/sharana/Documents/Senior_Design/DAC/DAC/inc" -I"C:/Users/sharana/Documents/Senior_Design/DAC/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/sharana/Documents/Senior_Design/DAC/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/sharana/Documents/Senior_Design/DAC/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/sharana/Documents/Senior_Design/DAC/TLV/inc" -g -o "startup/startup_stm32.o" "../startup/startup_stm32.s"
-'Finished building: ../startup/startup_stm32.s'
-' '
-'Building file: ../src/main.c'
-'Invoking: MCU GCC Compiler'
-C:\Users\sharana\Documents\Senior_Design\DAC\DAC\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F446xx -I"C:/Users/sharana/Documents/Senior_Design/DAC/TLV/inc" -I"C:/Users/sharana/Documents/Senior_Design/DAC/nucleo-f446re_stdperiph_lib" -I"C:/Users/sharana/Documents/Senior_Design/DAC/DAC/inc" -I"C:/Users/sharana/Documents/Senior_Design/DAC/nucleo-f446re_stdperiph_lib/CMSIS/core" -I"C:/Users/sharana/Documents/Senior_Design/DAC/nucleo-f446re_stdperiph_lib/CMSIS/device" -I"C:/Users/sharana/Documents/Senior_Design/DAC/nucleo-f446re_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-In file included from ../src/main.c:12:0:
-C:/Users/sharana/Documents/Senior_Design/DAC/TLV/inc/tlv.h:102:16: error: unknown type name 'RingBuffer'
- void I2S_write(RingBuffer* I2S_buffer);
-                ^
-C:/Users/sharana/Documents/Senior_Design/DAC/TLV/inc/tlv.h:107:15: error: unknown type name 'SPI_TypeDef'
- void I2S_read(SPI_TypeDef* SPIx);
-               ^
-make: *** [src/main.o] Error 1
+11:35:34 **** Clean-only build of configuration Debug for project DAC ****
+make clean 
+rm -rf *
+ 
 
-12:28:49 Build Finished (took 1s.208ms)
+11:35:35 Build Finished (took 193ms)
 

@@ -1,7 +1,7 @@
-20:28:54 **** Clean-only build of configuration Debug for project ADC ****
+11:35:34 **** Clean-only build of configuration Debug for project ADC ****
 make clean 
 rm -rf *
  
 
-20:28:55 Build Finished (took 611ms)
+11:35:34 Build Finished (took 265ms)
 
