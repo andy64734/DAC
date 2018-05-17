@@ -6,6 +6,7 @@
  */
 #include <ringbuffer.h>
 #include <tlv.h>
+#include "delay.h"
 
 void tlv_initI2sPins()
 {
@@ -15,26 +16,46 @@ void tlv_initI2sPins()
 	i2sPortSettings.GPIO_Mode = GPIO_Mode_AF;
 	i2sPortSettings.GPIO_Pin = SD_I2S_WS_PIN | SD_I2S_CK_PIN | SD_I2S_SD_PIN;
 	GPIO_Init(SD_I2S_PORT, &i2sPortSettings);
+	// Separate configuration needed for the MCLK pin. Yes, it's needed.
+	GPIO_InitTypeDef i2sMclkPortSettings;
+	GPIO_StructInit(&i2sMclkPortSettings);
+	i2sMclkPortSettings.GPIO_Mode = GPIO_Mode_AF;
+	i2sMclkPortSettings.GPIO_Pin = SD_I2S_MCLK_PIN;
+	GPIO_Init(SD_I2S_MCLK_PORT, &i2sMclkPortSettings);
 	// Now set up the alternate function for each the pins.
 	GPIO_PinAFConfig(SD_I2S_PORT, SD_I2S_WS, SD_I2S_ALT_FUNC);
 	GPIO_PinAFConfig(SD_I2S_PORT, SD_I2S_CK, SD_I2S_ALT_FUNC);
 	GPIO_PinAFConfig(SD_I2S_PORT, SD_I2S_SD, SD_I2S_ALT_FUNC);
+	GPIO_PinAFConfig(SD_I2S_MCLK_PORT, SD_I2S_MCLK, SD_I2S_ALT_FUNC);
 }
 
-void SD_I2S_write(RingBuffer* I2S_buffer)
+bool SD_I2S_write(RingBuffer* I2S_buffer)
 {
-	while(!SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_TXE));
-	SPI_I2S_SendData(SPI2, get(I2S_buffer));
+	if (!SPI_I2S_GetFlagStatus(SD_I2S_INTERFACE, SPI_I2S_FLAG_TXE))
+	{
+		return false;
+	}
+	if (!hasElement(I2S_buffer))
+	{
+		return false;
+	}
+	int32_t bufferValue = get(I2S_buffer);
+	// TODO Flip the order if needed.
+	SPI_I2S_SendData(SD_I2S_INTERFACE, (uint16_t) bufferValue);
+	SPI_I2S_SendData(SD_I2S_INTERFACE, (uint16_t) (bufferValue >> 16));
+	return true;
 }
 
 void SD_I2S_read(SPI_TypeDef* SPIx, RingBuffer* I2S_buffer)
 {
-	while(!SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_RXNE));
+	while(!SPI_I2S_GetFlagStatus(SD_I2S_INTERFACE, SPI_I2S_FLAG_RXNE));
 	put(I2S_buffer, SPI_I2S_ReceiveData(SPIx));
 }
 
 void tlv_initI2cPins()
 {
+	GPIO_PinAFConfig(SD_I2C_PORT, SD_I2C_SCL, SD_I2C_ALT_FUNC);
+	GPIO_PinAFConfig(SD_I2C_PORT, SD_I2C_SDA, SD_I2C_ALT_FUNC);
 	// Set I2C alternate function settings
 	GPIO_InitTypeDef i2cPortSettings;
 	GPIO_StructInit(&i2cPortSettings);
@@ -43,12 +64,11 @@ void tlv_initI2cPins()
 	// I2C standard requires pull-up resistors to avoid bus contention.
 	// However, external, strong 2.2 k-ohm resistors will help us out.
 	i2cPortSettings.GPIO_PuPd = GPIO_PuPd_NOPULL;
+	// For open drain. Don't force high when 1.
+	i2cPortSettings.GPIO_OType = GPIO_OType_OD;
 	GPIO_Init(SD_I2C_PORT, &i2cPortSettings);
-	GPIO_PinAFConfig(SD_I2C_PORT, SD_I2C_SCL, SD_I2C_ALT_FUNC);
-	GPIO_PinAFConfig(SD_I2C_PORT, SD_I2C_SDA, SD_I2C_ALT_FUNC);
 
-	I2C_InitTypeDef i2cInterfaceSettings;
-	I2C_StructInit(&i2cInterfaceSettings);
+
 }
 
 void tlv_initResetPin()
@@ -61,7 +81,9 @@ void tlv_initResetPin()
 
 	// Initiate the DAC reset.s
 	GPIO_ResetBits(TLV_RESET_PORT, 1 << TLV_RESET_PIN);
+	delay_ms(500);
 	GPIO_SetBits(TLV_RESET_PORT, 1 << TLV_RESET_PIN);
+	delay_ms(11); // Delay for 11 ms for nRF chip.
 }
 
 void tlv_i2c_write(uint8_t address, uint8_t message)
@@ -70,7 +92,9 @@ void tlv_i2c_write(uint8_t address, uint8_t message)
 	// but just in case.
 	while (I2C_GetFlagStatus(SD_I2C_INTERFACE, I2C_FLAG_BUSY));
 	I2C_GenerateSTART(SD_I2C_INTERFACE, ENABLE);
-	I2C_Send7bitAddress(SD_I2C_INTERFACE, address, I2C_Direction_Transmitter);
+	while (!I2C_CheckEvent(SD_I2C_INTERFACE,
+			I2C_EVENT_MASTER_MODE_SELECT));
+	I2C_Send7bitAddress(SD_I2C_INTERFACE, TLV_I2C_ADDR, I2C_Direction_Transmitter);
 	while (!I2C_CheckEvent(SD_I2C_INTERFACE,
 				I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED));
 	// Now send an address.
@@ -87,18 +111,26 @@ void tlv_i2c_write(uint8_t address, uint8_t message)
 	// is disabled after the start bit has been successfully sent.
 }
 
-
 uint8_t tlv_i2c_read(uint8_t address)
 {
 	while (I2C_GetFlagStatus(SD_I2C_INTERFACE, I2C_FLAG_BUSY));
 	I2C_GenerateSTART(SD_I2C_INTERFACE, ENABLE);
-	I2C_Send7bitAddress(SD_I2C_INTERFACE, address, I2C_Direction_Receiver);
 	while (!I2C_CheckEvent(SD_I2C_INTERFACE,
-				I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED));
+				I2C_EVENT_MASTER_MODE_SELECT));
+	I2C_Send7bitAddress(SD_I2C_INTERFACE, TLV_I2C_ADDR, I2C_Direction_Transmitter);
+
+	while (!I2C_CheckEvent(SD_I2C_INTERFACE,
+				I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED));
 	// Send an address, and wait to receive a byte back.
 	I2C_SendData(SD_I2C_INTERFACE, address);
 	while (!I2C_CheckEvent(SD_I2C_INTERFACE,
 			I2C_EVENT_MASTER_BYTE_TRANSMITTED));
+	I2C_GenerateSTART(SD_I2C_INTERFACE, ENABLE);
+	while (!I2C_CheckEvent(SD_I2C_INTERFACE,
+				I2C_EVENT_MASTER_MODE_SELECT));
+	I2C_Send7bitAddress(SD_I2C_INTERFACE, TLV_I2C_ADDR, I2C_Direction_Receiver);
+	while (!I2C_CheckEvent(SD_I2C_INTERFACE,
+				I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED));
 	// STOP generated after receiving next byte.
 	I2C_GenerateSTOP(SD_I2C_INTERFACE, ENABLE);
 	while (!I2C_CheckEvent(SD_I2C_INTERFACE, I2C_EVENT_MASTER_BYTE_RECEIVED));

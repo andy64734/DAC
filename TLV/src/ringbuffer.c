@@ -8,15 +8,22 @@
 #include "ringbuffer.h"
 #include <inttypes.h>
 #include <stdbool.h>
+
+void ringBufferInit(RingBuffer* buffer)
+{
+	buffer->head = 0;
+	buffer->tail = 0;
+}
 /*
  * Here we have a method put characters into the buffer.
  * @param buffer it is a structure type to access the correct ring buffer.
- * @param element it is the character.
+ * @param element The data to be sent. 'Tis 32 bits to allow for both
+ * channels of 16 bit smaples.
  */
-bool put(RingBuffer* buffer, uint16_t element)
+bool put(RingBuffer* buffer, int32_t element)
 {
 	//Check space
-	if (hasSpace(&buffer) != 0)
+	if (hasSpace(buffer) != 0)
 	{	//adding element to the buffer
 		buffer->buffer[buffer->tail] = element;
 		buffer->tail = (buffer->tail + 1) % BUF_SIZE;
@@ -31,15 +38,17 @@ bool put(RingBuffer* buffer, uint16_t element)
 /*
  * Here we have a method to get and remove characters into the buffer.
  * @param buffer it is a structure type to access the correct ring buffer.
+ * RETURNS: The 2 16-bit samples of the channel. Since data is unsigned,
+ * this is unsigned.
  */
-uint16_t get(RingBuffer* buffer)
+int32_t get(RingBuffer* buffer)
 {
 	//check space
-	if (hasElement(&buffer) != 0)
+	if (hasElement(buffer) != 0)
 	{	//get character from the  buffer
-		uint16_t element = buffer->buffer[buffer->tail];
+		int32_t element = buffer->buffer[buffer->head];
 		//adjusting get
-		buffer->tail = (buffer->tail+1) % BUF_SIZE;
+		buffer->head = (buffer->head+1) % BUF_SIZE;
 		return element;
 	}
 	return '\0';

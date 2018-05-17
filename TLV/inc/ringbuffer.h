@@ -11,21 +11,26 @@
 #include <stdbool.h>
 
 // Size of the buffer
-#define BUF_SIZE 1
+// The size must be strictly greater than 1, since the ring buffer
+// would be detected as full if the head is directly after the tail. If
+// they are at the same point, then this is detected as empty. This
+// size prevents confusion.
+#define BUF_SIZE 2
 
 // buffer structure
 typedef struct{
 	uint8_t tail;
 	uint8_t head;
-	uint8_t empty;
-	uint16_t buffer[BUF_SIZE];
+	int32_t buffer[BUF_SIZE];
 } RingBuffer;
 
+void ringBufferInit(RingBuffer*);
+
 // put an element in a buffer
-bool put(RingBuffer*, uint16_t);
+bool put(RingBuffer*, int32_t);
 
 // remove an element from the buffer
-uint16_t get(RingBuffer*);
+int32_t get(RingBuffer*);
 
 // to check if the buffer is full
 int hasSpace(RingBuffer*);
